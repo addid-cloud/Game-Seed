@@ -6,16 +6,19 @@ using Unity.Cinemachine;
 public class GameManager : MonoBehaviour
 {
     [Header("Daftar Pemain")]
-    public PlayerMovement[] players; // Diubah menjadi Array agar bisa menampung banyak pemain
+    public PlayerMovement[] players; 
     private int currentPlayerIndex = 0;
 
     [Header("Pengaturan Kamera")]
     public CinemachineCamera vcamOverview; 
     public CinemachineCamera vcamPlayer;   
+    public CinemachineCamera vcamDice; // Tempat masuknya kamera dadu
 
-    private bool isTurnActive = false; // Penanda agar spasi tidak bisa di-spam
+    [Header("Referensi Objek")]
+    public DiceRoller physicalDice; // Tempat masuknya script dadu
 
-    // Variabel pembantu untuk memanggil pemain yang gilirannya sedang aktif
+    private bool isTurnActive = false; 
+
     public PlayerMovement ActivePlayer => players[currentPlayerIndex];
 
     void Start()
@@ -25,55 +28,64 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        // 1. Logika Kamera
-        if (ActivePlayer.isMoving && !ActivePlayer.isWaitingForBranch)
+        // 1. Logika Kamera Sinematik Terpadu
+        if (physicalDice.isRolling)
         {
-            vcamPlayer.Priority = 20;
+            // Jika dadu sedang dilempar, kamera fokus ke dadu
+            vcamDice.Priority = 30;
+            vcamPlayer.Priority = 10;
             vcamOverview.Priority = 10;
-            
-            // Kamera otomatis berpindah target ke pemain yang sedang jalan (Fitur CM3)
+        }
+        else if (ActivePlayer.isMoving && !ActivePlayer.isWaitingForBranch)
+        {
+            // Jika pemain bergerak, kamera mengikuti pemain
+            vcamDice.Priority = 10;
+            vcamPlayer.Priority = 30;
+            vcamOverview.Priority = 10;
             vcamPlayer.Target.TrackingTarget = ActivePlayer.transform;
         }
         else
         {
+            // Jika diam menunggu giliran / di persimpangan, sorot keseluruhan papan
+            vcamDice.Priority = 10;
             vcamPlayer.Priority = 10;
-            vcamOverview.Priority = 20;
+            vcamOverview.Priority = 30;
         }
 
-        // 2. Logika Lempar Dadu
-        // Hanya bisa lempar dadu jika tidak ada yang sedang jalan
+        // 2. Logika Tekan Spasi (Lempar Dadu)
         if (Keyboard.current.spaceKey.wasPressedThisFrame && !isTurnActive)
         {
             StartCoroutine(PlayTurn());
         }
 
-        // 3. Logika Pilih Cabang (Pilihan dikirim ke pemain yang sedang aktif)
+        // 3. Logika Memilih Cabang Jalan
         if (Keyboard.current.digit1Key.wasPressedThisFrame) ActivePlayer.SelectBranch(0);
         if (Keyboard.current.digit2Key.wasPressedThisFrame) ActivePlayer.SelectBranch(1);
     }
 
-    // Coroutine khusus untuk mengatur alur giliran dari awal sampai akhir
     IEnumerator PlayTurn()
     {
         isTurnActive = true;
 
-        int diceResult = Random.Range(1, 4);
-        Debug.Log("=== Player " + (currentPlayerIndex + 1) + " Lempar Dadu: " + diceResult + " ===");
+        // Tahap 1: Kamera otomatis ke dadu, dan dadu dilempar
+        yield return StartCoroutine(physicalDice.RollPhysicalDice());
 
-        // Menunggu pemain yang aktif selesai berjalan
+        // Tahap 2: Ambil angka dadu fisik yang baru saja keluar
+        int diceResult = physicalDice.finalResult;
+        Debug.Log("=== Player " + (currentPlayerIndex + 1) + " Dapat Angka: " + diceResult + " ===");
+
+        // Tahap 3: Pemain jalan (Kamera otomatis mengejar pemain)
         yield return StartCoroutine(ActivePlayer.MoveSteps(diceResult));
-
-        // --- Proses Giliran Selesai ---
         
-        currentPlayerIndex++; // Pindah ke indeks pemain berikutnya
-
-        // Jika semua pemain sudah jalan, kembali ke Player 1 (indeks 0)
-        if (currentPlayerIndex >= players.Length)
-        {
-            currentPlayerIndex = 0; 
-        }
-
+        // Tahap 4: Akhir giliran, ganti pemain
+        currentPlayerIndex++; 
+        if (currentPlayerIndex >= players.Length) currentPlayerIndex = 0; 
+        
         Debug.Log(">>> Giliran berpindah ke Player " + (currentPlayerIndex + 1));
-        isTurnActive = false; // Buka kunci agar pemain berikutnya bisa menekan Spasi
+        
+        // Sembunyikan teks angka di dadu untuk bersiap di giliran orang berikutnya
+        physicalDice.floatingText.text = "";
+        
+        isTurnActive = false; 
     }
 }
