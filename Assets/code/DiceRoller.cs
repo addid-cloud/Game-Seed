@@ -14,42 +14,46 @@ public class DiceRoller : MonoBehaviour
     [HideInInspector] public int finalResult = 0;
 
     private Vector3 startPosition;
+    private Quaternion startRotation;
 
     void Start()
     {
-        // Menyimpan posisi awal dadu agar bisa dikembalikan saat dilempar lagi
         startPosition = transform.position;
+        startRotation = transform.rotation;
     }
 
     public IEnumerator RollPhysicalDice()
     {
         isRolling = true;
-        floatingText.text = ""; // Sembunyikan teks
+        floatingText.text = ""; 
 
-        // Reset posisi dadu ke titik awal sebelum dilempar
+        // Reset posisi & rotasi dadu ke titik asal agar konsisten
         rb.isKinematic = true; 
         transform.position = startPosition;
+        transform.rotation = startRotation;
         rb.isKinematic = false;
 
-        // Lempar dadu ke atas dan putar secara acak
-        rb.AddForce(Vector3.up * 7f, ForceMode.Impulse);
-        rb.AddTorque(new Vector3(Random.Range(100, 500), Random.Range(100, 500), Random.Range(100, 500)));
+        // --- MODIFIKASI LEMPARAN HALUS ---
+        // Memberi sedikit gaya dorong ke atas (Y) dan sedikit variasi menyamping (X & Z) agar menggelinding natural
+        Vector3 throwForce = new Vector3(Random.Range(-1.5f, 1.5f), 5.5f, Random.Range(-1.5f, 1.5f));
+        rb.AddForce(throwForce, ForceMode.Impulse);
 
-        yield return new WaitForSeconds(0.5f); 
+        // Mengurangi kekuatan putaran (Torque) agar perputaran dadu lebih elegan dan jelas terlihat
+        Vector3 elegantTorque = new Vector3(Random.Range(60f, 150f), Random.Range(60f, 150f), Random.Range(60f, 150f));
+        rb.AddTorque(elegantTorque, ForceMode.Impulse);
 
-        // Tunggu sampai pergerakan dadu benar-benar berhenti
+        yield return new WaitForSeconds(0.4f); 
+
+        // Tunggu sampai dadu benar-benar tenang
         while (rb.linearVelocity.magnitude > 0.05f || rb.angularVelocity.magnitude > 0.05f)
         {
             yield return null;
         }
 
-        // Baca hasil dan tampilkan
         finalResult = GetTopFace();
         floatingText.text = finalResult.ToString(); 
         
-        // Jeda 1.5 detik agar pemain bisa melihat angka yang keluar sebelum kamera berpindah
-        yield return new WaitForSeconds(1.5f);
-
+        yield return new WaitForSeconds(1.2f);
         isRolling = false;
     }
 
