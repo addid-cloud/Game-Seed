@@ -5,7 +5,7 @@ using Unity.Cinemachine;
 
 public class GameManager : MonoBehaviour
 {
-    // Struktur fase untuk mengatur urutan Spasi
+    // Fase giliran sekarang lebih ringkas (tanpa DiceFinished)
     private enum TurnPhase { WaitingForFocus, ReadyToRoll, Rolling, Moving }
     private TurnPhase currentPhase = TurnPhase.WaitingForFocus;
 
@@ -23,79 +23,109 @@ public class GameManager : MonoBehaviour
 
     public PlayerMovement ActivePlayer => players[currentPlayerIndex];
 
+    // Status map
+    private bool isOverviewActive = false;
+    private int diceResult = 0;
+
     void Start()
     {
+        // Set target kamera ke pemain pertama di awal game
+        vcamPlayer.Target.TrackingTarget = ActivePlayer.transform;
         Debug.Log(">>> Giliran Player 1. Tekan SPASI untuk fokus ke dadu.");
     }
 
     void Update()
     {
-        // 1. Logika Pengontrol Kamera Berdasarkan Fase Aktual
-        if (currentPhase == TurnPhase.ReadyToRoll || currentPhase == TurnPhase.Rolling)
+        // --- 1. FITUR OVERVIEW MAP (Tombol 'O') ---
+        if (Keyboard.current.oKey.wasPressedThisFrame)
         {
-            vcamDice.Priority = 30;
-            vcamPlayer.Priority = 10;
-            vcamOverview.Priority = 10;
-        }
-        else if (currentPhase == TurnPhase.Moving && !ActivePlayer.isWaitingForBranch)
-        {
-            vcamDice.Priority = 10;
-            vcamPlayer.Priority = 30;
-            vcamOverview.Priority = 10;
-            vcamPlayer.Target.TrackingTarget = ActivePlayer.transform;
-        }
-        else // Ketika WaitingForFocus atau sedang memilih jalan buntu/cabang
-        {
-            vcamDice.Priority = 10;
-            vcamPlayer.Priority = 10;
-            vcamOverview.Priority = 30;
+            isOverviewActive = !isOverviewActive;
         }
 
-        // 2. Logika Input Spasi Dua Tahap
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        // --- 2. LOGIKA PRIORITAS KAMERA ---
+        if (isOverviewActive)
         {
-            // TAHAP 1: Kamera pindah ke dadu, dadu belum dilempar
+            // Jika Overview aktif, paksa kamera atas mengambil alih
+            vcamOverview.Priority = 30;
+            vcamPlayer.Priority = 10;
+            vcamDice.Priority = 10;
+        }
+        else
+        {
+            // Jika Overview mati, jalankan logika sutradara kamera normal
+            if (currentPhase == TurnPhase.ReadyToRoll || currentPhase == TurnPhase.Rolling)
+            {
+                // Sorot dadu
+                vcamDice.Priority = 30;
+                vcamPlayer.Priority = 10;
+                vcamOverview.Priority = 10;
+            }
+            else // Fase WaitingForFocus atau Moving
+            {
+                // Sorot pemain
+                vcamPlayer.Priority = 30;
+                vcamDice.Priority = 10;
+                vcamOverview.Priority = 10;
+            }
+        }
+
+        // --- 3. LOGIKA INPUT SPASI (Hanya 2 Tahap) ---
+        // Spasi tidak berfungsi jika sedang melihat Overview Map atau sedang memilih cabang
+        if (Keyboard.current.spaceKey.wasPressedThisFrame && !isOverviewActive && !ActivePlayer.isWaitingForBranch)
+        {
             if (currentPhase == TurnPhase.WaitingForFocus)
             {
                 currentPhase = TurnPhase.ReadyToRoll;
                 Debug.Log("Kamera fokus ke dadu. Tekan SPASI sekali lagi untuk melempar!");
             }
-            // TAHAP 2: Lempar dadu fisik
             else if (currentPhase == TurnPhase.ReadyToRoll)
             {
-                StartCoroutine(PlayTurnSequence());
+                StartCoroutine(RollDiceSequence());
             }
         }
 
-        // 3. Logika Memilih Cabang Jalan
-        if (Keyboard.current.digit1Key.wasPressedThisFrame) ActivePlayer.SelectBranch(0);
-        if (Keyboard.current.digit2Key.wasPressedThisFrame) ActivePlayer.SelectBranch(1);
+        // --- 4. LOGIKA CABANG JALAN ---
+        if (Keyboard.current.digit1Key.wasPressedThisFrame && ActivePlayer.isWaitingForBranch) ActivePlayer.SelectBranch(0);
+        if (Keyboard.current.digit2Key.wasPressedThisFrame && ActivePlayer.isWaitingForBranch) ActivePlayer.SelectBranch(1);
     }
 
-    IEnumerator PlayTurnSequence()
+    IEnumerator RollDiceSequence()
     {
-        // Kunci fase agar spasi tidak bisa ditekan lagi saat dadu menggelinding
         currentPhase = TurnPhase.Rolling;
-
-        // Jalankan lemparan dadu fisik (kamera tetap fokus di dadu)
+        
+        // Tunggu sampai dadu fisik selesai berguling
         yield return StartCoroutine(physicalDice.RollPhysicalDice());
+        diceResult = physicalDice.finalResult;
+        
+        Debug.Log($"Dadu berhenti di angka {diceResult}. Bersiap jalan...");
 
-        int diceResult = physicalDice.finalResult;
-        Debug.Log("=== Player " + (currentPlayerIndex + 1) + " Mengambil Langkah: " + diceResult + " ===");
+        // JEDA DRAMATIS: Biarkan pemain melihat hasil dadu selama 1.5 detik
+        yield return new WaitForSeconds(1.5f);
+        
+        // OTOMATIS: Langsung pindah ke fase berjalan tanpa perlu Spasi lagi!
+        StartCoroutine(MovePlayerSequence());
+    }
 
-        // Pindah ke fase bergerak (kamera otomatis terbang mengejar player)
+    IEnumerator MovePlayerSequence()
+    {
         currentPhase = TurnPhase.Moving;
+        Debug.Log($"=== Player {currentPlayerIndex + 1} Mengambil Langkah: {diceResult} ===");
+
+        // Tunggu sampai karakter selesai berjalan di papan
         yield return StartCoroutine(ActivePlayer.MoveSteps(diceResult));
         
-        // Ganti giliran ke player berikutnya
+        // --- GANTI GILIRAN & EFEK RIVAL PAN ---
         currentPlayerIndex++; 
         if (currentPlayerIndex >= players.Length) currentPlayerIndex = 0; 
         
-        Debug.Log(">>> Giliran Player " + (currentPlayerIndex + 1) + ". Tekan SPASI untuk fokus ke dadu.");
-        
+        // Otomatis pindah target kamera ke pemain berikutnya. 
+        // Cinemachine akan memicu transisi melayang (pan) secara halus!
+        vcamPlayer.Target.TrackingTarget = ActivePlayer.transform;
+
+        Debug.Log($">>> Giliran Player {currentPlayerIndex + 1}. Tekan SPASI untuk fokus ke dadu.");
         physicalDice.floatingText.text = "";
         
-        // Kembalikan ke fase awal agar pemain berikutnya harus menekan spasi 2x juga
+        // Reset fase
         currentPhase = TurnPhase.WaitingForFocus;
     }
 }

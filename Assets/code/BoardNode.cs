@@ -3,23 +3,34 @@ using UnityEngine;
 
 public class BoardNode : MonoBehaviour
 {
-    // 1. Membuat daftar pilihan tipe petak sesuai konsep desain
-  public enum SpaceType 
+    public enum SpaceType 
     { 
-        MemorySpace,      // Biru
-        StaticSpace,      // Abu-abu
-        LossSpace,        // Merah
-        FriendshipSpace,  // Berbagi daun
-        TapeSpace,        // Kuning
-        NostalgiaSpace,   // Hijau
-        GlitchSpace,      // Ungu
-        DreamTrap         // Hitam
+        MemorySpace, StaticSpace, LossSpace, FriendshipSpace, 
+        TapeSpace, NostalgiaSpace, GlitchSpace, DreamTrap 
     }
 
     [Header("Pengaturan Petak")]
-    // 2. Variabel untuk menentukan tipe petak ini di Inspector
     public SpaceType tipePetak = SpaceType.StaticSpace;
 
     [Header("Jalur Selanjutnya")]
     public List<BoardNode> nextNodes = new List<BoardNode>();
+
+    // Fungsi untuk memvisualisasikan jalur di Editor (Sangat membantu debugging)
+    private void OnDrawGizmos()
+    {
+        if (nextNodes == null) return;
+
+        foreach (BoardNode node in nextNodes)
+        {
+            if (node != null)
+            {
+                Gizmos.color = Color.green;
+                // Menggambar garis dari petak ini ke petak berikutnya
+                Gizmos.DrawLine(transform.position, node.transform.position);
+                
+                // Menggambar bola kecil di ujung garis sebagai panah petunjuk arah
+                Gizmos.DrawSphere(node.transform.position, 0.2f);
+            }
+        }
+    }
 }
