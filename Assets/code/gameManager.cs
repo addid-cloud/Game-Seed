@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     private enum TurnPhase { WaitingForFocus, ReadyToRoll, Rolling, Moving }
     private TurnPhase currentPhase = TurnPhase.WaitingForFocus;
 
+    [Header("Pengaturan Waktu")]
+    [SerializeField] private float waitBeforeMoving = 1.5f;
+
     [Header("Daftar Pemain")]
     public PlayerMovement[] players; 
     private int currentPlayerIndex = 0;
@@ -32,6 +35,9 @@ public class GameManager : MonoBehaviour
         // Set target kamera ke pemain pertama di awal game
         vcamPlayer.Target.TrackingTarget = ActivePlayer.transform;
         Debug.Log(">>> Giliran Player 1. Tekan SPASI untuk fokus ke dadu.");
+        
+        // Karakter menghadap kamera dan menyapa
+        ActivePlayer.SambutGiliran(vcamPlayer.transform.position);
     }
 
     void Update()
@@ -99,8 +105,8 @@ public class GameManager : MonoBehaviour
         
         Debug.Log($"Dadu berhenti di angka {diceResult}. Bersiap jalan...");
 
-        // JEDA DRAMATIS: Biarkan pemain melihat hasil dadu selama 1.5 detik
-        yield return new WaitForSeconds(1.5f);
+        // JEDA DRAMATIS: Biarkan pemain melihat hasil dadu sebelum bergerak
+        yield return new WaitForSeconds(waitBeforeMoving);
         
         // OTOMATIS: Langsung pindah ke fase berjalan tanpa perlu Spasi lagi!
         StartCoroutine(MovePlayerSequence());
@@ -125,6 +131,9 @@ public class GameManager : MonoBehaviour
         Debug.Log($">>> Giliran Player {currentPlayerIndex + 1}. Tekan SPASI untuk fokus ke dadu.");
         physicalDice.floatingText.text = "";
         
+        // Karakter selanjutnya menghadap kamera dan menyapa
+        ActivePlayer.SambutGiliran(vcamPlayer.transform.position);
+
         // Reset fase
         currentPhase = TurnPhase.WaitingForFocus;
     }

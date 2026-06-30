@@ -44,9 +44,11 @@ public class DiceRoller : MonoBehaviour
 
         yield return new WaitForSeconds(0.4f); 
 
-        // Tunggu sampai dadu benar-benar tenang
-        while (rb.linearVelocity.magnitude > 0.05f || rb.angularVelocity.magnitude > 0.05f)
+        // Tunggu sampai dadu benar-benar tenang (batas waktu 5 detik agar tidak softlock)
+        float timeout = 5f;
+        while ((rb.linearVelocity.magnitude > 0.05f || rb.angularVelocity.magnitude > 0.05f) && timeout > 0)
         {
+            timeout -= Time.deltaTime;
             yield return null;
         }
 
@@ -60,12 +62,14 @@ public class DiceRoller : MonoBehaviour
     private int GetTopFace()
     {
         int topFace = 1;
-        float highestY = -Mathf.Infinity;
+        float maxDot = -Mathf.Infinity;
         for (int i = 0; i < diceFaces.Length; i++)
         {
-            if (diceFaces[i].position.y > highestY)
+            // Deteksi yang paling mengarah ke atas menggunakan Dot Product
+            float dot = Vector3.Dot(diceFaces[i].up, Vector3.up);
+            if (dot > maxDot)
             {
-                highestY = diceFaces[i].position.y;
+                maxDot = dot;
                 topFace = i + 1;
             }
         }
