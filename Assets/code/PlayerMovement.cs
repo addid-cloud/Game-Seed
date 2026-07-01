@@ -83,14 +83,41 @@ public class PlayerMovement : MonoBehaviour
                 timeElapsed += Time.deltaTime;
                 float t = Mathf.Clamp01(timeElapsed / duration);
 
-                // Posisi dasar garis lurus tanpa fisika maupun lompatan
-                Vector3 basePos = Vector3.Lerp(startPos, target, t);
+                // 1. Hitung posisi dasar X dan Z menggunakan Lerp
+                Vector3 currentPos = Vector3.Lerp(startPos, target, t);
 
-                transform.position = basePos;
+                // 2. Siapkan Raycast dari posisi tinggi untuk mendeteksi tanah di bawahnya
+                float rayOriginY = Mathf.Max(startPos.y, target.y) + 10f;
+                Vector3 rayOrigin = new Vector3(currentPos.x, rayOriginY, currentPos.z);
+
+                // 3. Gunakan LayerMask untuk MENGABAIKAN layer "Player"
+                int layerMask = ~LayerMask.GetMask("Player");
+
+                // 4. Tembakkan Raycast ke bawah (Vector3.down)
+                if (Physics.Raycast(rayOrigin, Vector3.down, out RaycastHit hit, 20f, layerMask))
+                {
+                    // Jika kena tanah, posisikan Y karakter di titik sentuh tanah tersebut + yOffset
+                    currentPos.y = hit.point.y + yOffset;
+                }
+                else
+                {
+                    // Fallback jika tidak mendeteksi tanah
+                    currentPos.y = Mathf.Lerp(startPos.y, target.y, t);
+                }
+
+                // 6. Terakhir, terapkan ke posisi
+                transform.position = currentPos;
                 yield return null;
             }
 
-            transform.position = target;
+            // Memastikan posisi akhir di target juga presisi di atas tanah
+            Vector3 finalPos = target;
+            float finalRayY = finalPos.y + 10f;
+            if (Physics.Raycast(new Vector3(finalPos.x, finalRayY, finalPos.z), Vector3.down, out RaycastHit finalHit, 20f, ~LayerMask.GetMask("Player")))
+            {
+                finalPos.y = finalHit.point.y + yOffset;
+            }
+            transform.position = finalPos;
             
             // Menghentikan animasi jalan sesaat jika ada jeda antar petak
             if (visualController != null) visualController.AturPergerakan(false);

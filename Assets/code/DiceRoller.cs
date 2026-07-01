@@ -62,14 +62,14 @@ public class DiceRoller : MonoBehaviour
     private int GetTopFace()
     {
         int topFace = 1;
-        float maxDot = -Mathf.Infinity;
+        float maxY = -Mathf.Infinity;
         for (int i = 0; i < diceFaces.Length; i++)
         {
-            // Deteksi yang paling mengarah ke atas menggunakan Dot Product
-            float dot = Vector3.Dot(diceFaces[i].up, Vector3.up);
-            if (dot > maxDot)
+            // Deteksi sisi mana yang berada paling atas (posisi Y tertinggi) di World Space
+            float currentY = diceFaces[i].position.y;
+            if (currentY > maxY)
             {
-                maxDot = dot;
+                maxY = currentY;
                 topFace = i + 1;
             }
         }

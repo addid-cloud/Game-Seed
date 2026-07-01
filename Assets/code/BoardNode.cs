@@ -11,6 +11,7 @@ public class BoardNode : MonoBehaviour
 
     [Header("Pengaturan Petak")]
     public SpaceType tipePetak = SpaceType.StaticSpace;
+    public int nodeIndex;
 
     [Header("Jalur Selanjutnya")]
     public List<BoardNode> nextNodes = new List<BoardNode>();

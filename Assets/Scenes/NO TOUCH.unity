@@ -540,6 +540,7 @@ GameObject:
   - component: {fileID: 12551962}
   - component: {fileID: 12551961}
   - component: {fileID: 12551960}
+  - component: {fileID: 12551964}
   m_Layer: 0
   m_Name: Circle (11)
   m_TagString: Untagged
@@ -560,6 +561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 0
   nextNodes:
   - {fileID: 2001366285}
 --- !u!23 &12551961
@@ -634,6 +636,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &12551964
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12551959}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: 0.0000000018626451, y: -0.0000000018626451, z: 0.000082592735}
 --- !u!1 &21059996
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,6 +669,7 @@ GameObject:
   - component: {fileID: 21059999}
   - component: {fileID: 21059998}
   - component: {fileID: 21059997}
+  - component: {fileID: 21060001}
   m_Layer: 0
   m_Name: Circle (25)
   m_TagString: Untagged
@@ -666,6 +690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 1
   nextNodes:
   - {fileID: 755489922}
 --- !u!23 &21059998
@@ -740,6 +765,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &21060001
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21059996}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: 0, y: -0.0000000055879354, z: 0.00008259646}
 --- !u!1 &21642927 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2276660119763341528, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -779,6 +825,7 @@ GameObject:
   - component: {fileID: 23107389}
   - component: {fileID: 23107388}
   - component: {fileID: 23107387}
+  - component: {fileID: 23107391}
   m_Layer: 0
   m_Name: Circle (33)
   m_TagString: Untagged
@@ -799,6 +846,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 2
   nextNodes:
   - {fileID: 1772815034}
 --- !u!23 &23107388
@@ -873,6 +921,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &23107391
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23107386}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: 0, y: 1.1736606e-18, z: 0.00008259646}
 --- !u!1 &24556263 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -877844090330054826, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -912,6 +981,7 @@ GameObject:
   - component: {fileID: 38965440}
   - component: {fileID: 38965439}
   - component: {fileID: 38965438}
+  - component: {fileID: 38965442}
   m_Layer: 0
   m_Name: Circle (19)
   m_TagString: Untagged
@@ -932,6 +1002,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 2
+  nodeIndex: 3
   nextNodes:
   - {fileID: 1581470372}
 --- !u!23 &38965439
@@ -1006,6 +1077,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &38965442
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38965437}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: 0.0000000037252903, y: -0.0000000037252903, z: 0.00008259646}
 --- !u!1 &45791781 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2880845631039136090, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -1239,6 +1331,7 @@ GameObject:
   - component: {fileID: 82511045}
   - component: {fileID: 82511044}
   - component: {fileID: 82511043}
+  - component: {fileID: 82511047}
   m_Layer: 0
   m_Name: Circle (23)
   m_TagString: Untagged
@@ -1259,6 +1352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 4
   nextNodes:
   - {fileID: 769517605}
 --- !u!23 &82511044
@@ -1333,6 +1427,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &82511047
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82511042}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: 0, y: -0.0000000020954758, z: 0.00008259646}
 --- !u!1 &86090926 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4518433858344388367, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -1401,7 +1516,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1160943982923511622, guid: 1809c7a5ce1c2464ca26db1a64fe62bc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 23.689
+      value: 23.984
       objectReference: {fileID: 0}
     - target: {fileID: 1160943982923511622, guid: 1809c7a5ce1c2464ca26db1a64fe62bc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1530,6 +1645,7 @@ GameObject:
   - component: {fileID: 126197829}
   - component: {fileID: 126197828}
   - component: {fileID: 126197827}
+  - component: {fileID: 126197831}
   m_Layer: 0
   m_Name: Circle (4)
   m_TagString: Untagged
@@ -1550,6 +1666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 5
   nextNodes:
   - {fileID: 1251301285}
 --- !u!23 &126197828
@@ -1618,12 +1735,33 @@ Transform:
   m_GameObject: {fileID: 126197826}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -1.236, y: 9.493, z: -1.075}
+  m_LocalPosition: {x: -1.19, y: 9.493, z: -1.332}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &126197831
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126197826}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: 0.0000000037252903, y: 1.1736606e-18, z: 0.000082592735}
 --- !u!1 &133126096
 GameObject:
   m_ObjectHideFlags: 0
@@ -1636,6 +1774,7 @@ GameObject:
   - component: {fileID: 133126099}
   - component: {fileID: 133126098}
   - component: {fileID: 133126097}
+  - component: {fileID: 133126101}
   m_Layer: 0
   m_Name: Circle (53)
   m_TagString: Untagged
@@ -1656,6 +1795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 6
   nextNodes:
   - {fileID: 873918567}
 --- !u!23 &133126098
@@ -1730,6 +1870,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -94.977, y: 0, z: 0}
+--- !u!65 &133126101
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133126096}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0.0000000016880222, y: -0.000000014900546, z: 0.00008259275}
 --- !u!1 &133369386
 GameObject:
   m_ObjectHideFlags: 0
@@ -1982,6 +2143,119 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3989715489358673812, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
+--- !u!1 &169339469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 169339470}
+  - component: {fileID: 169339473}
+  - component: {fileID: 169339472}
+  - component: {fileID: 169339471}
+  m_Layer: 0
+  m_Name: maps1.145 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &169339470
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169339469}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.000000037748947, y: 0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.17, y: -0.05, z: -0.68}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1416434009}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &169339471
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169339469}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1451497990205130361, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
+--- !u!23 &169339472
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169339469}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: -8666002503253397111, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &169339473
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169339469}
+  m_Mesh: {fileID: -1451497990205130361, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
 --- !u!1 &176301074 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3964750964745884323, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -2048,6 +2322,7 @@ GameObject:
   - component: {fileID: 188769686}
   - component: {fileID: 188769685}
   - component: {fileID: 188769684}
+  - component: {fileID: 188769688}
   m_Layer: 0
   m_Name: Circle (87)
   m_TagString: Untagged
@@ -2068,6 +2343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 7
   nextNodes:
   - {fileID: 889129290}
 --- !u!23 &188769685
@@ -2142,6 +2418,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -94.977, y: 0, z: 0}
+--- !u!65 &188769688
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188769683}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0.000000007450581, y: 6.153362e-13, z: 0.000082589024}
 --- !u!1 &190070198
 GameObject:
   m_ObjectHideFlags: 0
@@ -2293,6 +2590,7 @@ GameObject:
   - component: {fileID: 221928346}
   - component: {fileID: 221928345}
   - component: {fileID: 221928344}
+  - component: {fileID: 221928348}
   m_Layer: 0
   m_Name: Circle (76)
   m_TagString: Untagged
@@ -2313,6 +2611,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 8
   nextNodes:
   - {fileID: 0}
   - {fileID: 0}
@@ -2388,6 +2687,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -90.288, y: 176.267, z: -170.453}
+--- !u!65 &221928348
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221928343}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492534, y: 0.0019492536, z: 0.00016517813}
+  m_Center: {x: 0.0000000037263193, y: 0.000000014903314, z: 0.00008258903}
 --- !u!1 &230338665
 GameObject:
   m_ObjectHideFlags: 0
@@ -2487,6 +2807,7 @@ GameObject:
   - component: {fileID: 243750060}
   - component: {fileID: 243750059}
   - component: {fileID: 243750058}
+  - component: {fileID: 243750062}
   m_Layer: 0
   m_Name: Circle (37)
   m_TagString: Untagged
@@ -2507,6 +2828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 9
   nextNodes:
   - {fileID: 708938862}
 --- !u!23 &243750059
@@ -2581,6 +2903,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &243750062
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243750057}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: 0, y: 1.1736606e-18, z: 0.00008258156}
 --- !u!1 &246425240 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8160422924731033954, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -2674,6 +3017,7 @@ GameObject:
   - component: {fileID: 288362914}
   - component: {fileID: 288362913}
   - component: {fileID: 288362912}
+  - component: {fileID: 288362916}
   m_Layer: 0
   m_Name: Circle (86)
   m_TagString: Untagged
@@ -2694,6 +3038,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 10
   nextNodes:
   - {fileID: 424969180}
 --- !u!23 &288362913
@@ -2768,6 +3113,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -94.977, y: 0, z: 0}
+--- !u!65 &288362916
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288362911}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0.000000014901161, y: -0.000000003724675, z: 0.000082596474}
 --- !u!1 &290471185
 GameObject:
   m_ObjectHideFlags: 0
@@ -3021,6 +3387,7 @@ GameObject:
   - component: {fileID: 343843326}
   - component: {fileID: 343843325}
   - component: {fileID: 343843324}
+  - component: {fileID: 343843327}
   m_Layer: 0
   m_Name: Circle (3)
   m_TagString: Untagged
@@ -3037,7 +3404,7 @@ Transform:
   m_GameObject: {fileID: 343843322}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -4.058, y: 9.581, z: -1.732}
+  m_LocalPosition: {x: -4.18, y: 9.581, z: -2.181}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3056,6 +3423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 11
   nextNodes:
   - {fileID: 651895994}
   - {fileID: 553363275}
@@ -3116,6 +3484,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 343843322}
   m_Mesh: {fileID: -2124705421725058983, guid: b5fccbccc63f10148a8a61fb7b43973d, type: 3}
+--- !u!65 &343843327
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 343843322}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: -0.0000000037252903, y: 0.0000000037252903, z: 0.000082592735}
 --- !u!1 &349394303 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7540914465959428365, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -3209,6 +3598,7 @@ GameObject:
   - component: {fileID: 365502548}
   - component: {fileID: 365502547}
   - component: {fileID: 365502546}
+  - component: {fileID: 365502550}
   m_Layer: 0
   m_Name: Circle (66)
   m_TagString: Untagged
@@ -3229,6 +3619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 12
   nextNodes:
   - {fileID: 1279516579}
 --- !u!23 &365502547
@@ -3303,6 +3694,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -110.916, y: 110.43, z: -107.472}
+--- !u!65 &365502550
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365502545}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492533, y: 0.0019492534, z: 0.00016517813}
+  m_Center: {x: -0.000000003720656, y: 0, z: 0.00008260393}
 --- !u!1 &375374474 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2817255543431927518, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -3450,6 +3862,7 @@ GameObject:
   - component: {fileID: 396043021}
   - component: {fileID: 396043020}
   - component: {fileID: 396043019}
+  - component: {fileID: 396043023}
   m_Layer: 0
   m_Name: Circle (22)
   m_TagString: Untagged
@@ -3470,6 +3883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 6
+  nodeIndex: 13
   nextNodes:
   - {fileID: 82511043}
 --- !u!23 &396043020
@@ -3544,6 +3958,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -112.436, y: 0, z: 0}
+--- !u!65 &396043023
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396043018}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492543, z: 0.00016517812}
+  m_Center: {x: -0.0000000037252903, y: 0.0000000018626451, z: 0.000082592785}
 --- !u!1 &402335734 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4871321691778632039, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -3672,7 +4107,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5046747964149640949, guid: ce8fc965c533f8c488791ce2275800aa, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 37.07
+      value: 39.74
       objectReference: {fileID: 0}
     - target: {fileID: 5046747964149640949, guid: ce8fc965c533f8c488791ce2275800aa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3891,6 +4326,7 @@ GameObject:
   - component: {fileID: 424969182}
   - component: {fileID: 424969181}
   - component: {fileID: 424969180}
+  - component: {fileID: 424969184}
   m_Layer: 0
   m_Name: Circle (90)
   m_TagString: Untagged
@@ -3911,6 +4347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 0
+  nodeIndex: 14
   nextNodes:
   - {fileID: 1437433191}
 --- !u!23 &424969181
@@ -3985,6 +4422,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -94.977, y: 0, z: 0}
+--- !u!65 &424969184
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424969179}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0.000000007450581, y: -0.000000007449965, z: 0.000082589024}
 --- !u!1 &427127281 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3377643209910573063, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -4087,6 +4545,7 @@ GameObject:
   - component: {fileID: 480056799}
   - component: {fileID: 480056798}
   - component: {fileID: 480056797}
+  - component: {fileID: 480056801}
   m_Layer: 0
   m_Name: Circle (21)
   m_TagString: Untagged
@@ -4107,6 +4566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 15
   nextNodes:
   - {fileID: 396043019}
 --- !u!23 &480056798
@@ -4181,6 +4641,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &480056801
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480056796}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: -0.000000007450581, y: -0.0000000037252903, z: 0.000082592735}
 --- !u!1 &482275964 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8419062456423290971, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -4318,7 +4799,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
+      insertIndex: 145
+      addedObject: {fileID: 169339470}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
+      insertIndex: 229
+      addedObject: {fileID: 1287422179}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1756925599988528423, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
       insertIndex: -1
@@ -5173,6 +5660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 16
   nextNodes:
   - {fileID: 0}
   - {fileID: 0}
@@ -5289,6 +5777,7 @@ GameObject:
   - component: {fileID: 553363277}
   - component: {fileID: 553363276}
   - component: {fileID: 553363275}
+  - component: {fileID: 553363279}
   m_Layer: 0
   m_Name: Circle (2)
   m_TagString: Untagged
@@ -5309,6 +5798,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 17
   nextNodes:
   - {fileID: 1562870358}
 --- !u!23 &553363276
@@ -5377,12 +5867,33 @@ Transform:
   m_GameObject: {fileID: 553363274}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -4.971, y: 9.598, z: -1.096}
+  m_LocalPosition: {x: -5.394, y: 9.598, z: -1.345}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &553363279
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553363274}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: -0.000000007450581, y: 0.0000000037252903, z: 0.00008259646}
 --- !u!1 &557498787 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8510462246286621670, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -5746,6 +6257,7 @@ GameObject:
   - component: {fileID: 651895996}
   - component: {fileID: 651895995}
   - component: {fileID: 651895994}
+  - component: {fileID: 651895998}
   m_Layer: 0
   m_Name: Circle (1)
   m_TagString: Untagged
@@ -5766,6 +6278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 18
   nextNodes:
   - {fileID: 1604315661}
 --- !u!23 &651895995
@@ -5834,12 +6347,33 @@ Transform:
   m_GameObject: {fileID: 651895993}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -3.034, y: 9.553, z: -1.495}
+  m_LocalPosition: {x: -3.034, y: 9.553, z: -1.842}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &651895998
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651895993}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: -0.0000000037252903, y: -0.0000000037252903, z: 0.000082592735}
 --- !u!1 &654508752 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6236614928523064750, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -5879,6 +6413,7 @@ GameObject:
   - component: {fileID: 659231881}
   - component: {fileID: 659231880}
   - component: {fileID: 659231879}
+  - component: {fileID: 659231883}
   m_Layer: 0
   m_Name: Circle (79)
   m_TagString: Untagged
@@ -5899,6 +6434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 19
   nextNodes:
   - {fileID: 1526151526}
 --- !u!23 &659231880
@@ -5973,6 +6509,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -90.288, y: 176.267, z: -170.453}
+--- !u!65 &659231883
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659231878}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492534, y: 0.0019492536, z: 0.00016517813}
+  m_Center: {x: -9.302938e-10, y: -0.000000014899007, z: 0.00008258158}
 --- !u!1 &670677936 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3063149969481907463, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -6218,6 +6775,7 @@ GameObject:
   - component: {fileID: 708938864}
   - component: {fileID: 708938863}
   - component: {fileID: 708938862}
+  - component: {fileID: 708938866}
   m_Layer: 0
   m_Name: Circle (39)
   m_TagString: Untagged
@@ -6238,6 +6796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 7
+  nodeIndex: 20
   nextNodes:
   - {fileID: 1529600056}
 --- !u!23 &708938863
@@ -6312,6 +6871,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &708938866
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708938861}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: 0, y: -0.000000011175871, z: 0.00008258901}
 --- !u!1 &719951255 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4653513519865209415, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -6524,6 +7104,7 @@ GameObject:
   - component: {fileID: 755489924}
   - component: {fileID: 755489923}
   - component: {fileID: 755489922}
+  - component: {fileID: 755489926}
   m_Layer: 0
   m_Name: Circle (26)
   m_TagString: Untagged
@@ -6544,6 +7125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 21
   nextNodes:
   - {fileID: 2028617404}
 --- !u!23 &755489923
@@ -6618,6 +7200,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &755489926
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755489921}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: 0, y: -0.000000007450581, z: 0.00008259646}
 --- !u!1 &766443896
 GameObject:
   m_ObjectHideFlags: 0
@@ -6630,6 +7233,7 @@ GameObject:
   - component: {fileID: 766443899}
   - component: {fileID: 766443898}
   - component: {fileID: 766443897}
+  - component: {fileID: 766443901}
   m_Layer: 0
   m_Name: Circle (65)
   m_TagString: Untagged
@@ -6650,6 +7254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 22
   nextNodes:
   - {fileID: 365502546}
 --- !u!23 &766443898
@@ -6724,6 +7329,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -94.977, y: 0, z: 0}
+--- !u!65 &766443901
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766443896}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0, y: 0.000000007451196, z: 0.000082589024}
 --- !u!1 &769517604
 GameObject:
   m_ObjectHideFlags: 0
@@ -6736,6 +7362,7 @@ GameObject:
   - component: {fileID: 769517607}
   - component: {fileID: 769517606}
   - component: {fileID: 769517605}
+  - component: {fileID: 769517609}
   m_Layer: 0
   m_Name: Circle (24)
   m_TagString: Untagged
@@ -6756,6 +7383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 23
   nextNodes:
   - {fileID: 21059997}
 --- !u!23 &769517606
@@ -6830,6 +7458,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &769517609
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769517604}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: 0, y: -0.0000000055879354, z: 0.00008258901}
 --- !u!1 &772081159
 GameObject:
   m_ObjectHideFlags: 0
@@ -6842,6 +7491,7 @@ GameObject:
   - component: {fileID: 772081162}
   - component: {fileID: 772081161}
   - component: {fileID: 772081160}
+  - component: {fileID: 772081164}
   m_Layer: 0
   m_Name: Circle (72)
   m_TagString: Untagged
@@ -6862,6 +7512,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 24
   nextNodes:
   - {fileID: 1186400536}
 --- !u!23 &772081161
@@ -6936,6 +7587,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -90.288, y: 176.267, z: -170.453}
+--- !u!65 &772081164
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772081159}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492534, y: 0.0019492536, z: 0.00016517813}
+  m_Center: {x: 0.0000000037263193, y: 0.000000022353895, z: 0.00008259648}
 --- !u!1 &783398906 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7388383621759223421, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -6975,6 +7647,7 @@ GameObject:
   - component: {fileID: 784635754}
   - component: {fileID: 784635753}
   - component: {fileID: 784635752}
+  - component: {fileID: 784635755}
   m_Layer: 0
   m_Name: Circle (45)
   m_TagString: Untagged
@@ -7010,6 +7683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 25
   nextNodes:
   - {fileID: 1788374857}
 --- !u!23 &784635753
@@ -7069,6 +7743,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 784635750}
   m_Mesh: {fileID: -2124705421725058983, guid: b5fccbccc63f10148a8a61fb7b43973d, type: 3}
+--- !u!65 &784635755
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784635750}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0, y: -0.000000007449965, z: 0.000082589024}
 --- !u!1 &796939012 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -801655722633816801, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -7238,6 +7933,7 @@ GameObject:
   - component: {fileID: 842744608}
   - component: {fileID: 842744607}
   - component: {fileID: 842744606}
+  - component: {fileID: 842744610}
   m_Layer: 0
   m_Name: Circle (59)
   m_TagString: Untagged
@@ -7258,6 +7954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 26
   nextNodes:
   - {fileID: 1407085012}
   - {fileID: 980918270}
@@ -7333,6 +8030,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -94.977, y: 0, z: 0}
+--- !u!65 &842744610
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842744605}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0, y: -0.000000007449965, z: 0.000082589024}
 --- !u!1 &844476781 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2465177345396568275, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -7453,6 +8171,7 @@ GameObject:
   - component: {fileID: 856785474}
   - component: {fileID: 856785473}
   - component: {fileID: 856785472}
+  - component: {fileID: 856785476}
   m_Layer: 0
   m_Name: Circle (64)
   m_TagString: Untagged
@@ -7473,6 +8192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 27
   nextNodes:
   - {fileID: 1644035950}
   - {fileID: 766443897}
@@ -7548,6 +8268,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -94.977, y: 0, z: 0}
+--- !u!65 &856785476
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856785471}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0.0000000037252903, y: 0.000000007451196, z: 0.000082589024}
 --- !u!1 &862430363 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2879588578960298398, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -7625,6 +8366,7 @@ GameObject:
   - component: {fileID: 869270354}
   - component: {fileID: 869270353}
   - component: {fileID: 869270352}
+  - component: {fileID: 869270356}
   m_Layer: 0
   m_Name: Circle (44)
   m_TagString: Untagged
@@ -7645,6 +8387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 28
   nextNodes:
   - {fileID: 0}
   - {fileID: 0}
@@ -7720,6 +8463,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -94.977, y: 0, z: 0}
+--- !u!65 &869270356
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869270351}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0, y: -0.000000007449965, z: 0.000082589024}
 --- !u!1 &869987761 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2915440107031021058, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -7786,6 +8550,7 @@ GameObject:
   - component: {fileID: 872240609}
   - component: {fileID: 872240608}
   - component: {fileID: 872240607}
+  - component: {fileID: 872240611}
   m_Layer: 0
   m_Name: Circle (71)
   m_TagString: Untagged
@@ -7806,6 +8571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 29
   nextNodes:
   - {fileID: 772081160}
   - {fileID: 2029126940}
@@ -7881,6 +8647,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -90.288, y: 176.267, z: -170.453}
+--- !u!65 &872240611
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872240606}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492534, y: 0.0019492536, z: 0.00016517813}
+  m_Center: {x: 0.0000000055889644, y: 0.000000007452734, z: 0.00008258158}
 --- !u!1001 &873279420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7954,6 +8741,7 @@ GameObject:
   - component: {fileID: 873918569}
   - component: {fileID: 873918568}
   - component: {fileID: 873918567}
+  - component: {fileID: 873918571}
   m_Layer: 0
   m_Name: Circle (54)
   m_TagString: Untagged
@@ -7974,6 +8762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 30
   nextNodes:
   - {fileID: 1892152295}
 --- !u!23 &873918568
@@ -8048,6 +8837,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -94.977, y: 0, z: 0}
+--- !u!65 &873918571
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873918566}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0.0000000016298145, y: 6.153362e-13, z: 0.000082589024}
 --- !u!1 &877222276 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1702325598485583266, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -8087,6 +8897,7 @@ GameObject:
   - component: {fileID: 879855104}
   - component: {fileID: 879855103}
   - component: {fileID: 879855102}
+  - component: {fileID: 879855106}
   m_Layer: 0
   m_Name: Circle (69)
   m_TagString: Untagged
@@ -8107,6 +8918,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 6
+  nodeIndex: 31
   nextNodes:
   - {fileID: 872240607}
 --- !u!23 &879855103
@@ -8181,6 +8993,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -114.28, y: 130.27899, z: -126.966995}
+--- !u!65 &879855106
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879855101}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492536, z: 0.00016517824}
+  m_Center: {x: 0.000000007451599, y: -0.0000000074481195, z: 0.000082589046}
 --- !u!1 &883847685 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8484757597108255572, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -8247,6 +9080,7 @@ GameObject:
   - component: {fileID: 889129292}
   - component: {fileID: 889129291}
   - component: {fileID: 889129290}
+  - component: {fileID: 889129294}
   m_Layer: 0
   m_Name: Circle (61)
   m_TagString: Untagged
@@ -8267,6 +9101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 32
   nextNodes:
   - {fileID: 1644035950}
 --- !u!23 &889129291
@@ -8341,6 +9176,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -94.977, y: 0, z: 0}
+--- !u!65 &889129294
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889129289}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0.000000011175871, y: 6.153362e-13, z: 0.000082589024}
 --- !u!1 &892992999
 GameObject:
   m_ObjectHideFlags: 0
@@ -8353,6 +9209,7 @@ GameObject:
   - component: {fileID: 892993003}
   - component: {fileID: 892993002}
   - component: {fileID: 892993001}
+  - component: {fileID: 892993004}
   m_Layer: 0
   m_Name: Circle (38)
   m_TagString: Untagged
@@ -8388,6 +9245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 33
   nextNodes:
   - {fileID: 0}
   - {fileID: 0}
@@ -8448,6 +9306,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892992999}
   m_Mesh: {fileID: -2124705421725058983, guid: b5fccbccc63f10148a8a61fb7b43973d, type: 3}
+--- !u!65 &892993004
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892992999}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: 0, y: -0.0000000037252903, z: 0.00008258901}
 --- !u!1 &894854452 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5658328879744862183, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -8595,6 +9474,7 @@ GameObject:
   - component: {fileID: 930613331}
   - component: {fileID: 930613330}
   - component: {fileID: 930613329}
+  - component: {fileID: 930613332}
   m_Layer: 0
   m_Name: Circle (49)
   m_TagString: Untagged
@@ -8630,6 +9510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 34
   nextNodes:
   - {fileID: 0}
   - {fileID: 0}
@@ -8690,6 +9571,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 930613327}
   m_Mesh: {fileID: -2124705421725058983, guid: b5fccbccc63f10148a8a61fb7b43973d, type: 3}
+--- !u!65 &930613332
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930613327}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0, y: 0.000000007451196, z: 0.000082589024}
 --- !u!1 &939909635 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1103714753262886112, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -8783,6 +9685,7 @@ GameObject:
   - component: {fileID: 945340199}
   - component: {fileID: 945340198}
   - component: {fileID: 945340197}
+  - component: {fileID: 945340201}
   m_Layer: 0
   m_Name: Circle (17)
   m_TagString: Untagged
@@ -8803,6 +9706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 0
+  nodeIndex: 35
   nextNodes:
   - {fileID: 1277124751}
 --- !u!23 &945340198
@@ -8871,12 +9775,33 @@ Transform:
   m_GameObject: {fileID: 945340196}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -5.307, y: 9.549, z: 3.374}
+  m_LocalPosition: {x: -5.627, y: 9.487, z: 3.374}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &945340201
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945340196}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: 0, y: 1.1736606e-18, z: 0.00008259646}
 --- !u!1 &949827418 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6625729982340081676, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -8970,6 +9895,7 @@ GameObject:
   - component: {fileID: 958174254}
   - component: {fileID: 958174253}
   - component: {fileID: 958174252}
+  - component: {fileID: 958174256}
   m_Layer: 0
   m_Name: Circle (81)
   m_TagString: Untagged
@@ -8990,6 +9916,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 36
   nextNodes:
   - {fileID: 982177501}
 --- !u!23 &958174253
@@ -9064,6 +9991,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -94.977, y: 0, z: 0}
+--- !u!65 &958174256
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958174251}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0, y: 6.153362e-13, z: 0.000082589024}
 --- !u!1 &959393480 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1341437985090026425, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -9103,6 +10051,7 @@ GameObject:
   - component: {fileID: 964167873}
   - component: {fileID: 964167872}
   - component: {fileID: 964167871}
+  - component: {fileID: 964167875}
   m_Layer: 0
   m_Name: Circle (7)
   m_TagString: Untagged
@@ -9123,6 +10072,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 0
+  nodeIndex: 37
   nextNodes:
   - {fileID: 1166256167}
 --- !u!23 &964167872
@@ -9197,6 +10147,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &964167875
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964167870}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: 0, y: 1.1736606e-18, z: 0.000082592735}
 --- !u!1 &967089658 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8143007892693610339, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -9236,6 +10207,7 @@ GameObject:
   - component: {fileID: 967300484}
   - component: {fileID: 967300483}
   - component: {fileID: 967300482}
+  - component: {fileID: 967300486}
   m_Layer: 0
   m_Name: Circle (74)
   m_TagString: Untagged
@@ -9256,6 +10228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 38
   nextNodes:
   - {fileID: 1526260651}
 --- !u!23 &967300483
@@ -9330,6 +10303,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -90.288, y: 176.267, z: -170.453}
+--- !u!65 &967300486
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967300481}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492534, y: 0.0019492536, z: 0.00016517813}
+  m_Center: {x: 0.000000004657642, y: 0.000000007452734, z: 0.00008258158}
 --- !u!1 &971228247 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7395302270019886681, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -9477,6 +10471,7 @@ GameObject:
   - component: {fileID: 980918272}
   - component: {fileID: 980918271}
   - component: {fileID: 980918270}
+  - component: {fileID: 980918274}
   m_Layer: 0
   m_Name: Circle (60)
   m_TagString: Untagged
@@ -9497,6 +10492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 39
   nextNodes:
   - {fileID: 1862723493}
 --- !u!23 &980918271
@@ -9571,6 +10567,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -94.977, y: 0, z: 0}
+--- !u!65 &980918274
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980918269}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0, y: -0.000000007449965, z: 0.000082589024}
 --- !u!1 &982177500
 GameObject:
   m_ObjectHideFlags: 0
@@ -9583,6 +10600,7 @@ GameObject:
   - component: {fileID: 982177503}
   - component: {fileID: 982177502}
   - component: {fileID: 982177501}
+  - component: {fileID: 982177505}
   m_Layer: 0
   m_Name: Circle (51)
   m_TagString: Untagged
@@ -9603,6 +10621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 40
   nextNodes:
   - {fileID: 1973244747}
 --- !u!23 &982177502
@@ -9677,6 +10696,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -94.977, y: 0, z: 0}
+--- !u!65 &982177505
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982177500}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0, y: -0.000000007449965, z: 0.000082589024}
 --- !u!1 &992158078
 GameObject:
   m_ObjectHideFlags: 0
@@ -9689,6 +10729,7 @@ GameObject:
   - component: {fileID: 992158081}
   - component: {fileID: 992158080}
   - component: {fileID: 992158079}
+  - component: {fileID: 992158083}
   m_Layer: 0
   m_Name: Circle (77)
   m_TagString: Untagged
@@ -9709,6 +10750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 4
+  nodeIndex: 41
   nextNodes:
   - {fileID: 221928344}
 --- !u!23 &992158080
@@ -9783,6 +10825,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -90.288, y: 176.267, z: -170.453}
+--- !u!65 &992158083
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992158078}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492534, y: 0.0019492536, z: 0.00016517813}
+  m_Center: {x: -4.6463253e-10, y: -0.000000014899007, z: 0.00008259648}
 --- !u!1 &998249533 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3732965719461598059, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -10011,6 +11074,7 @@ GameObject:
   - component: {fileID: 1038733030}
   - component: {fileID: 1038733029}
   - component: {fileID: 1038733028}
+  - component: {fileID: 1038733032}
   m_Layer: 0
   m_Name: Circle (10)
   m_TagString: Untagged
@@ -10031,6 +11095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 2
+  nodeIndex: 42
   nextNodes:
   - {fileID: 12551960}
 --- !u!23 &1038733029
@@ -10105,6 +11170,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1038733032
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038733027}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: 0.0000000018626451, y: -0.0000000018626451, z: 0.000082592735}
 --- !u!1 &1044383475 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4218280890573753908, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -10414,6 +11500,7 @@ GameObject:
   - component: {fileID: 1114943875}
   - component: {fileID: 1114943874}
   - component: {fileID: 1114943873}
+  - component: {fileID: 1114943876}
   m_Layer: 0
   m_Name: Circle (36)
   m_TagString: Untagged
@@ -10449,6 +11536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 43
   nextNodes:
   - {fileID: 0}
   - {fileID: 0}
@@ -10509,6 +11597,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1114943871}
   m_Mesh: {fileID: -2124705421725058983, guid: b5fccbccc63f10148a8a61fb7b43973d, type: 3}
+--- !u!65 &1114943876
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114943871}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: 0, y: 1.1736606e-18, z: 0.00008258156}
 --- !u!1 &1126896400 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -46659639073967245, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -10656,6 +11765,7 @@ GameObject:
   - component: {fileID: 1152386322}
   - component: {fileID: 1152386321}
   - component: {fileID: 1152386320}
+  - component: {fileID: 1152386324}
   m_Layer: 0
   m_Name: Circle (50)
   m_TagString: Untagged
@@ -10676,6 +11786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 44
   nextNodes:
   - {fileID: 958174252}
 --- !u!23 &1152386321
@@ -10750,6 +11861,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -94.977, y: 0, z: 0}
+--- !u!65 &1152386324
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152386319}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0, y: -0.000000014900546, z: 0.00008259275}
 --- !u!1 &1157475630 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 48169636301097275, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -10789,6 +11921,7 @@ GameObject:
   - component: {fileID: 1161188999}
   - component: {fileID: 1161188998}
   - component: {fileID: 1161188997}
+  - component: {fileID: 1161189001}
   m_Layer: 0
   m_Name: Circle (30)
   m_TagString: Untagged
@@ -10809,6 +11942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 45
   nextNodes:
   - {fileID: 1474967676}
 --- !u!23 &1161188998
@@ -10883,6 +12017,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1161189001
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161188996}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: 0, y: -0.000000006519258, z: 0.00008258901}
 --- !u!1 &1163090298 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1615680420926231030, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -10922,6 +12077,7 @@ GameObject:
   - component: {fileID: 1166256169}
   - component: {fileID: 1166256168}
   - component: {fileID: 1166256167}
+  - component: {fileID: 1166256171}
   m_Layer: 0
   m_Name: Circle (8)
   m_TagString: Untagged
@@ -10942,6 +12098,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 46
   nextNodes:
   - {fileID: 1627753224}
 --- !u!23 &1166256168
@@ -11016,6 +12173,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1166256171
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166256166}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: 0.0000000018626451, y: -0.0000000037252903, z: 0.00008258901}
 --- !u!1 &1184071601
 GameObject:
   m_ObjectHideFlags: 0
@@ -11028,6 +12206,7 @@ GameObject:
   - component: {fileID: 1184071605}
   - component: {fileID: 1184071604}
   - component: {fileID: 1184071603}
+  - component: {fileID: 1184071606}
   m_Layer: 0
   m_Name: Circle (41)
   m_TagString: Untagged
@@ -11063,6 +12242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 47
   nextNodes:
   - {fileID: 1824407698}
 --- !u!23 &1184071604
@@ -11122,6 +12302,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1184071601}
   m_Mesh: {fileID: -2124705421725058983, guid: b5fccbccc63f10148a8a61fb7b43973d, type: 3}
+--- !u!65 &1184071606
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184071601}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0, y: 0.000000003725906, z: 0.00008259275}
 --- !u!1 &1185585334 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1951648513540172710, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -11161,6 +12362,7 @@ GameObject:
   - component: {fileID: 1186400538}
   - component: {fileID: 1186400537}
   - component: {fileID: 1186400536}
+  - component: {fileID: 1186400540}
   m_Layer: 0
   m_Name: Circle (73)
   m_TagString: Untagged
@@ -11181,6 +12383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 48
   nextNodes:
   - {fileID: 967300482}
 --- !u!23 &1186400537
@@ -11255,6 +12458,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -90.288, y: 176.267, z: -170.453}
+--- !u!65 &1186400540
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186400535}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492534, y: 0.0019492536, z: 0.00016517813}
+  m_Center: {x: 1.0287652e-12, y: -0.000000014899007, z: 0.00008258903}
 --- !u!1 &1187876471 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5447941794252663478, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -11402,6 +12626,7 @@ GameObject:
   - component: {fileID: 1226537659}
   - component: {fileID: 1226537658}
   - component: {fileID: 1226537657}
+  - component: {fileID: 1226537661}
   m_Layer: 0
   m_Name: Circle (56)
   m_TagString: Untagged
@@ -11422,6 +12647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 0
+  nodeIndex: 49
   nextNodes:
   - {fileID: 1447035807}
 --- !u!23 &1226537658
@@ -11496,6 +12722,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -94.977, y: 0, z: 0}
+--- !u!65 &1226537661
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226537656}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0.0000000037252903, y: 0.000000003725906, z: 0.000082589024}
 --- !u!1 &1241420344 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4933184941858743050, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -11589,6 +12836,7 @@ GameObject:
   - component: {fileID: 1248910808}
   - component: {fileID: 1248910807}
   - component: {fileID: 1248910806}
+  - component: {fileID: 1248910810}
   m_Layer: 0
   m_Name: Circle (68)
   m_TagString: Untagged
@@ -11609,6 +12857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 50
   nextNodes:
   - {fileID: 879855102}
 --- !u!23 &1248910807
@@ -11683,6 +12932,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -114.28, y: 130.27899, z: -126.966995}
+--- !u!65 &1248910810
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248910805}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492536, z: 0.00016517824}
+  m_Center: {x: 0.00000001117689, y: -0.0000000074481195, z: 0.000082589046}
 --- !u!1 &1250497839 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 450267541322572033, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -11722,6 +12992,7 @@ GameObject:
   - component: {fileID: 1251301287}
   - component: {fileID: 1251301286}
   - component: {fileID: 1251301285}
+  - component: {fileID: 1251301289}
   m_Layer: 0
   m_Name: Circle (6)
   m_TagString: Untagged
@@ -11742,6 +13013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 51
   nextNodes:
   - {fileID: 964167871}
 --- !u!23 &1251301286
@@ -11810,12 +13082,33 @@ Transform:
   m_GameObject: {fileID: 1251301284}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -1.236, y: 9.443, z: -0.056}
+  m_LocalPosition: {x: -1.496, y: 9.443, z: -0.195}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1251301289
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251301284}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: 0.0000000018626451, y: 1.1736606e-18, z: 0.00008259646}
 --- !u!1 &1256579073 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4730915344915824095, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -11855,6 +13148,7 @@ GameObject:
   - component: {fileID: 1277124753}
   - component: {fileID: 1277124752}
   - component: {fileID: 1277124751}
+  - component: {fileID: 1277124755}
   m_Layer: 0
   m_Name: Circle (18)
   m_TagString: Untagged
@@ -11875,6 +13169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 52
   nextNodes:
   - {fileID: 38965438}
 --- !u!23 &1277124752
@@ -11943,12 +13238,33 @@ Transform:
   m_GameObject: {fileID: 1277124750}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -5.35, y: 9.493, z: 4.287}
+  m_LocalPosition: {x: -5.728, y: 9.493, z: 4.287}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1277124755
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277124750}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: 0.0000000037252903, y: -0.0000000018626451, z: 0.000082592735}
 --- !u!1 &1278898121
 GameObject:
   m_ObjectHideFlags: 0
@@ -11961,6 +13277,7 @@ GameObject:
   - component: {fileID: 1278898124}
   - component: {fileID: 1278898123}
   - component: {fileID: 1278898122}
+  - component: {fileID: 1278898126}
   m_Layer: 0
   m_Name: Circle (82)
   m_TagString: Untagged
@@ -11981,6 +13298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 53
   nextNodes:
   - {fileID: 1561800990}
 --- !u!23 &1278898123
@@ -12055,6 +13373,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -94.977, y: 0, z: 0}
+--- !u!65 &1278898126
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278898121}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0, y: 6.153362e-13, z: 0.000082589024}
 --- !u!1 &1279516578
 GameObject:
   m_ObjectHideFlags: 0
@@ -12067,6 +13406,7 @@ GameObject:
   - component: {fileID: 1279516581}
   - component: {fileID: 1279516580}
   - component: {fileID: 1279516579}
+  - component: {fileID: 1279516583}
   m_Layer: 0
   m_Name: Circle (67)
   m_TagString: Untagged
@@ -12087,6 +13427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 54
   nextNodes:
   - {fileID: 1248910806}
 --- !u!23 &1279516580
@@ -12161,6 +13502,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -114.28, y: 130.27899, z: -126.966995}
+--- !u!65 &1279516583
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279516578}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492536, z: 0.00016517824}
+  m_Center: {x: 0.0000000037263095, y: 2.4613447e-12, z: 0.000082589046}
 --- !u!1 &1280139227 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5146944250280611075, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -12200,6 +13562,7 @@ GameObject:
   - component: {fileID: 1283201412}
   - component: {fileID: 1283201411}
   - component: {fileID: 1283201410}
+  - component: {fileID: 1283201414}
   m_Layer: 0
   m_Name: Circle (28)
   m_TagString: Untagged
@@ -12220,6 +13583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 55
   nextNodes:
   - {fileID: 1786298952}
   - {fileID: 243750058}
@@ -12295,6 +13659,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1283201414
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283201409}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: 0, y: -0.000000007450581, z: 0.00008258901}
 --- !u!1 &1286217803 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5630441752441701987, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -12349,6 +13734,119 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2003939628751986577, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
+--- !u!1 &1287422178
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1287422179}
+  - component: {fileID: 1287422182}
+  - component: {fileID: 1287422181}
+  - component: {fileID: 1287422180}
+  m_Layer: 0
+  m_Name: maps1.229 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1287422179
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287422178}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.000000037748947, y: 0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.17, y: -0.05, z: -0.68}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1416434009}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &1287422180
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287422178}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6095253894312375614, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
+--- !u!23 &1287422181
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287422178}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: -8666002503253397111, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1287422182
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287422178}
+  m_Mesh: {fileID: 6095253894312375614, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
 --- !u!1 &1287745353 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 93882075967940913, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -12388,6 +13886,7 @@ GameObject:
   - component: {fileID: 1288771716}
   - component: {fileID: 1288771715}
   - component: {fileID: 1288771714}
+  - component: {fileID: 1288771717}
   m_Layer: 0
   m_Name: Circle (43)
   m_TagString: Untagged
@@ -12423,6 +13922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 56
   nextNodes:
   - {fileID: 869270352}
 --- !u!23 &1288771715
@@ -12482,6 +13982,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1288771712}
   m_Mesh: {fileID: -2124705421725058983, guid: b5fccbccc63f10148a8a61fb7b43973d, type: 3}
+--- !u!65 &1288771717
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288771712}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0, y: 6.153362e-13, z: 0.000082589024}
 --- !u!114 &1292402334 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3506781564772674381, guid: 1809c7a5ce1c2464ca26db1a64fe62bc, type: 3}
@@ -13041,6 +14562,7 @@ GameObject:
   - component: {fileID: 1403230363}
   - component: {fileID: 1403230362}
   - component: {fileID: 1403230361}
+  - component: {fileID: 1403230365}
   m_Layer: 0
   m_Name: Circle (88)
   m_TagString: Untagged
@@ -13061,6 +14583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 5
+  nodeIndex: 57
   nextNodes:
   - {fileID: 188769684}
 --- !u!23 &1403230362
@@ -13135,6 +14658,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -94.977, y: 0, z: 0}
+--- !u!65 &1403230365
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403230360}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0, y: -0.000000007449965, z: 0.000082596474}
 --- !u!1 &1407085011
 GameObject:
   m_ObjectHideFlags: 0
@@ -13147,6 +14691,7 @@ GameObject:
   - component: {fileID: 1407085014}
   - component: {fileID: 1407085013}
   - component: {fileID: 1407085012}
+  - component: {fileID: 1407085016}
   m_Layer: 0
   m_Name: Circle (58)
   m_TagString: Untagged
@@ -13167,6 +14712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 58
   nextNodes:
   - {fileID: 1278898122}
 --- !u!23 &1407085013
@@ -13241,6 +14787,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -94.977, y: 0, z: 0}
+--- !u!65 &1407085016
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407085011}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0.000000007450581, y: 6.153362e-13, z: 0.000082589024}
 --- !u!1 &1410546625 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7026511339370724748, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -13268,6 +14835,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3783655465961544472, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
+--- !u!4 &1416434009 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
+  m_PrefabInstance: {fileID: 508122717}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1435843156 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3216836644201101793, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -13307,6 +14879,7 @@ GameObject:
   - component: {fileID: 1437433193}
   - component: {fileID: 1437433192}
   - component: {fileID: 1437433191}
+  - component: {fileID: 1437433195}
   m_Layer: 0
   m_Name: Circle (89)
   m_TagString: Untagged
@@ -13327,6 +14900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 59
   nextNodes:
   - {fileID: 1403230361}
 --- !u!23 &1437433192
@@ -13401,6 +14975,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -94.977, y: 0, z: 0}
+--- !u!65 &1437433195
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437433190}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0.000000014901161, y: -0.000000007449965, z: 0.000082596474}
 --- !u!1 &1445508094 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5090050711361004313, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -13440,6 +15035,7 @@ GameObject:
   - component: {fileID: 1447035809}
   - component: {fileID: 1447035808}
   - component: {fileID: 1447035807}
+  - component: {fileID: 1447035811}
   m_Layer: 0
   m_Name: Circle (57)
   m_TagString: Untagged
@@ -13460,6 +15056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 60
   nextNodes:
   - {fileID: 842744606}
 --- !u!23 &1447035808
@@ -13534,6 +15131,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -94.977, y: 0, z: 0}
+--- !u!65 &1447035811
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447035806}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0.0000000037252903, y: 6.153362e-13, z: 0.000082596474}
 --- !u!114 &1457217898 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7344981833274041054, guid: c03fca7bc2682094a88a1b3e9c274a0d, type: 3}
@@ -13611,6 +15229,7 @@ GameObject:
   - component: {fileID: 1474967678}
   - component: {fileID: 1474967677}
   - component: {fileID: 1474967676}
+  - component: {fileID: 1474967680}
   m_Layer: 0
   m_Name: Circle (31)
   m_TagString: Untagged
@@ -13631,6 +15250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 61
   nextNodes:
   - {fileID: 1863796211}
   - {fileID: 23107387}
@@ -13706,6 +15326,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1474967680
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474967675}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: 0, y: -0.0000000055879354, z: 0.00008258901}
 --- !u!1 &1478907586 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 410555054704276607, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -13794,6 +15435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 0
+  nodeIndex: 62
   nextNodes:
   - {fileID: 343843324}
 --- !u!4 &1490486553
@@ -14030,6 +15672,7 @@ GameObject:
   - component: {fileID: 1526151528}
   - component: {fileID: 1526151527}
   - component: {fileID: 1526151526}
+  - component: {fileID: 1526151530}
   m_Layer: 0
   m_Name: Circle (78)
   m_TagString: Untagged
@@ -14050,6 +15693,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 63
   nextNodes:
   - {fileID: 992158079}
 --- !u!23 &1526151527
@@ -14124,6 +15768,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -90.288, y: 176.267, z: -170.453}
+--- !u!65 &1526151530
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526151525}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492534, y: 0.0019492536, z: 0.00016517813}
+  m_Center: {x: 0.0000000013980126, y: -0.000000022349589, z: 0.00008259648}
 --- !u!1 &1526260650
 GameObject:
   m_ObjectHideFlags: 0
@@ -14136,6 +15801,7 @@ GameObject:
   - component: {fileID: 1526260653}
   - component: {fileID: 1526260652}
   - component: {fileID: 1526260651}
+  - component: {fileID: 1526260655}
   m_Layer: 0
   m_Name: Circle (75)
   m_TagString: Untagged
@@ -14156,6 +15822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 64
   nextNodes:
   - {fileID: 221928344}
 --- !u!23 &1526260652
@@ -14230,6 +15897,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -90.288, y: 176.267, z: -170.453}
+--- !u!65 &1526260655
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526260650}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492534, y: 0.0019492536, z: 0.00016517813}
+  m_Center: {x: 9.323513e-10, y: -0.000000014899007, z: 0.00008258158}
 --- !u!1 &1529600055
 GameObject:
   m_ObjectHideFlags: 0
@@ -14242,6 +15930,7 @@ GameObject:
   - component: {fileID: 1529600058}
   - component: {fileID: 1529600057}
   - component: {fileID: 1529600056}
+  - component: {fileID: 1529600060}
   m_Layer: 0
   m_Name: Circle (40)
   m_TagString: Untagged
@@ -14262,6 +15951,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 65
   nextNodes:
   - {fileID: 0}
   - {fileID: 0}
@@ -14337,6 +16027,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -94.977, y: 0, z: 0}
+--- !u!65 &1529600060
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529600055}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0, y: 6.153362e-13, z: 0.000082589024}
 --- !u!1 &1534766181 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7580303398488194591, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -14403,6 +16114,7 @@ GameObject:
   - component: {fileID: 1537739219}
   - component: {fileID: 1537739218}
   - component: {fileID: 1537739217}
+  - component: {fileID: 1537739221}
   m_Layer: 0
   m_Name: Circle (48)
   m_TagString: Untagged
@@ -14423,6 +16135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 5
+  nodeIndex: 66
   nextNodes:
   - {fileID: 1152386320}
 --- !u!23 &1537739218
@@ -14497,6 +16210,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -94.977, y: 0, z: 0}
+--- !u!65 &1537739221
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537739216}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0, y: -0.000000014900546, z: 0.00008259275}
 --- !u!1 &1538273854 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1623023868188817954, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -14579,6 +16313,7 @@ GameObject:
   - component: {fileID: 1561800992}
   - component: {fileID: 1561800991}
   - component: {fileID: 1561800990}
+  - component: {fileID: 1561800994}
   m_Layer: 0
   m_Name: Circle (83)
   m_TagString: Untagged
@@ -14599,6 +16334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 67
   nextNodes:
   - {fileID: 1625308290}
 --- !u!23 &1561800991
@@ -14673,6 +16409,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -94.977, y: 0, z: 0}
+--- !u!65 &1561800994
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561800989}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0.000000007450581, y: -0.000000007449965, z: 0.000082589024}
 --- !u!1 &1562870357
 GameObject:
   m_ObjectHideFlags: 0
@@ -14685,6 +16442,7 @@ GameObject:
   - component: {fileID: 1562870360}
   - component: {fileID: 1562870359}
   - component: {fileID: 1562870358}
+  - component: {fileID: 1562870362}
   m_Layer: 0
   m_Name: Circle (14)
   m_TagString: Untagged
@@ -14705,6 +16463,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 68
   nextNodes:
   - {fileID: 1779143819}
 --- !u!23 &1562870359
@@ -14773,12 +16532,33 @@ Transform:
   m_GameObject: {fileID: 1562870357}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -5.307, y: 9.598, z: -0.087}
+  m_LocalPosition: {x: -5.625, y: 9.598, z: -0.087}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1562870362
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562870357}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: -0.000000007450581, y: 0.0000000037252903, z: 0.00008259646}
 --- !u!1 &1563051469 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6269844629988092435, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -14953,6 +16733,7 @@ GameObject:
   - component: {fileID: 1581470374}
   - component: {fileID: 1581470373}
   - component: {fileID: 1581470372}
+  - component: {fileID: 1581470376}
   m_Layer: 0
   m_Name: Circle (20)
   m_TagString: Untagged
@@ -14973,6 +16754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 69
   nextNodes:
   - {fileID: 480056797}
 --- !u!23 &1581470373
@@ -15047,6 +16829,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1581470376
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581470371}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: -0.000000007450581, y: -0.0000000018626451, z: 0.00008258901}
 --- !u!1 &1585210622 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3607765540283089005, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -15113,6 +16916,7 @@ GameObject:
   - component: {fileID: 1587031164}
   - component: {fileID: 1587031163}
   - component: {fileID: 1587031162}
+  - component: {fileID: 1587031166}
   m_Layer: 0
   m_Name: Circle (85)
   m_TagString: Untagged
@@ -15133,6 +16937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 70
   nextNodes:
   - {fileID: 288362912}
 --- !u!23 &1587031163
@@ -15207,6 +17012,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -94.977, y: 0, z: 0}
+--- !u!65 &1587031166
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587031161}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0.000000007450581, y: 6.153362e-13, z: 0.000082589024}
 --- !u!1 &1601607856 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3793348605099623854, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -15246,6 +17072,7 @@ GameObject:
   - component: {fileID: 1604315663}
   - component: {fileID: 1604315662}
   - component: {fileID: 1604315661}
+  - component: {fileID: 1604315665}
   m_Layer: 0
   m_Name: Circle (5)
   m_TagString: Untagged
@@ -15266,6 +17093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 71
   nextNodes:
   - {fileID: 126197827}
 --- !u!23 &1604315662
@@ -15334,12 +17162,33 @@ Transform:
   m_GameObject: {fileID: 1604315660}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -2.242, y: 9.535, z: -1.361}
+  m_LocalPosition: {x: -2.096, y: 9.535, z: -1.625}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1604315665
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604315660}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: 0, y: 0.0000000037252903, z: 0.000082592735}
 --- !u!1 &1620372755 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8261158706423057202, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -15379,6 +17228,7 @@ GameObject:
   - component: {fileID: 1625308292}
   - component: {fileID: 1625308291}
   - component: {fileID: 1625308290}
+  - component: {fileID: 1625308294}
   m_Layer: 0
   m_Name: Circle (84)
   m_TagString: Untagged
@@ -15399,6 +17249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 2
+  nodeIndex: 72
   nextNodes:
   - {fileID: 1587031162}
 --- !u!23 &1625308291
@@ -15473,6 +17324,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -94.977, y: 0, z: 0}
+--- !u!65 &1625308294
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625308289}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0, y: -0.000000003724675, z: 0.000082596474}
 --- !u!1 &1627753223
 GameObject:
   m_ObjectHideFlags: 0
@@ -15485,6 +17357,7 @@ GameObject:
   - component: {fileID: 1627753226}
   - component: {fileID: 1627753225}
   - component: {fileID: 1627753224}
+  - component: {fileID: 1627753228}
   m_Layer: 0
   m_Name: Circle (9)
   m_TagString: Untagged
@@ -15505,6 +17378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 73
   nextNodes:
   - {fileID: 1038733028}
 --- !u!23 &1627753225
@@ -15579,6 +17453,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1627753228
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627753223}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: 0.0000000018626451, y: 1.1736606e-18, z: 0.000082600185}
 --- !u!1 &1628528692 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -667156667901332873, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -15645,6 +17540,7 @@ GameObject:
   - component: {fileID: 1644035952}
   - component: {fileID: 1644035951}
   - component: {fileID: 1644035950}
+  - component: {fileID: 1644035954}
   m_Layer: 0
   m_Name: Circle (62)
   m_TagString: Untagged
@@ -15665,6 +17561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 74
   nextNodes:
   - {fileID: 856785472}
 --- !u!23 &1644035951
@@ -15739,6 +17636,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -94.977, y: 0, z: 0}
+--- !u!65 &1644035954
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644035949}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0.0000000037252903, y: 6.153362e-13, z: 0.000082589024}
 --- !u!1 &1652528156 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8325580880416281128, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -16131,6 +18049,54 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7508130964502846377, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
+--- !u!1 &1694538383
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1694538385}
+  - component: {fileID: 1694538384}
+  m_Layer: 0
+  m_Name: GameDataManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1694538384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694538383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5f2810c31b379d41bc55c5139c2e86f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameDataManager
+  savedPlayerNodeIndices: 
+  savedPlayerScores: 
+  savedCurrentPlayerIndex: 0
+  hasSavedData: 0
+--- !u!4 &1694538385
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694538383}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.33246, y: 21.72435, z: -0.95913}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1695258469 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4709558656744067675, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -16521,6 +18487,7 @@ GameObject:
   - component: {fileID: 1772815036}
   - component: {fileID: 1772815035}
   - component: {fileID: 1772815034}
+  - component: {fileID: 1772815038}
   m_Layer: 0
   m_Name: Circle (70)
   m_TagString: Untagged
@@ -16541,6 +18508,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 2
+  nodeIndex: 75
   nextNodes:
   - {fileID: 1226537657}
 --- !u!23 &1772815035
@@ -16615,6 +18583,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1772815038
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772815033}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: 0.0000000018626451, y: -0.0000000037252903, z: 0.00008259646}
 --- !u!1 &1774747840 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2270807877979795696, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -16654,6 +18643,7 @@ GameObject:
   - component: {fileID: 1779143821}
   - component: {fileID: 1779143820}
   - component: {fileID: 1779143819}
+  - component: {fileID: 1779143823}
   m_Layer: 0
   m_Name: Circle (15)
   m_TagString: Untagged
@@ -16674,6 +18664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 76
   nextNodes:
   - {fileID: 2085237959}
 --- !u!23 &1779143820
@@ -16742,12 +18733,33 @@ Transform:
   m_GameObject: {fileID: 1779143818}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -5.307, y: 9.563, z: 1.149}
+  m_LocalPosition: {x: -5.537, y: 9.563, z: 1.149}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1779143823
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779143818}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: 0, y: 0.0000000037252903, z: 0.000082585284}
 --- !u!1 &1786298951
 GameObject:
   m_ObjectHideFlags: 0
@@ -16760,6 +18772,7 @@ GameObject:
   - component: {fileID: 1786298954}
   - component: {fileID: 1786298953}
   - component: {fileID: 1786298952}
+  - component: {fileID: 1786298956}
   m_Layer: 0
   m_Name: Circle (35)
   m_TagString: Untagged
@@ -16780,6 +18793,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 77
   nextNodes:
   - {fileID: 1863796211}
 --- !u!23 &1786298953
@@ -16854,6 +18868,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1786298956
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786298951}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: 0, y: -0.0000000037252903, z: 0.00008258901}
 --- !u!1 &1788374855
 GameObject:
   m_ObjectHideFlags: 0
@@ -16866,6 +18901,7 @@ GameObject:
   - component: {fileID: 1788374859}
   - component: {fileID: 1788374858}
   - component: {fileID: 1788374857}
+  - component: {fileID: 1788374860}
   m_Layer: 0
   m_Name: Circle (46)
   m_TagString: Untagged
@@ -16901,6 +18937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 78
   nextNodes:
   - {fileID: 0}
   - {fileID: 0}
@@ -16961,6 +18998,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1788374855}
   m_Mesh: {fileID: -2124705421725058983, guid: b5fccbccc63f10148a8a61fb7b43973d, type: 3}
+--- !u!65 &1788374860
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788374855}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0, y: -0.000000007449965, z: 0.000082596474}
 --- !u!1 &1801271470 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7018752471721995016, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -17027,6 +19085,7 @@ GameObject:
   - component: {fileID: 1807682597}
   - component: {fileID: 1807682596}
   - component: {fileID: 1807682595}
+  - component: {fileID: 1807682598}
   m_Layer: 0
   m_Name: Circle (34)
   m_TagString: Untagged
@@ -17062,6 +19121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 79
   nextNodes:
   - {fileID: 0}
   - {fileID: 0}
@@ -17122,6 +19182,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1807682593}
   m_Mesh: {fileID: -2124705421725058983, guid: b5fccbccc63f10148a8a61fb7b43973d, type: 3}
+--- !u!65 &1807682598
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807682593}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: 0, y: -0.0000000037252903, z: 0.00008258901}
 --- !u!1 &1808209458 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4166708930394703340, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -17242,6 +19323,7 @@ GameObject:
   - component: {fileID: 1824407700}
   - component: {fileID: 1824407699}
   - component: {fileID: 1824407698}
+  - component: {fileID: 1824407702}
   m_Layer: 0
   m_Name: Circle (42)
   m_TagString: Untagged
@@ -17262,6 +19344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 80
   nextNodes:
   - {fileID: 0}
   - {fileID: 0}
@@ -17337,6 +19420,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -94.977, y: 0, z: 0}
+--- !u!65 &1824407702
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824407697}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0, y: -0.000000007449965, z: 0.000082589024}
 --- !u!1 &1825876514 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1794630550800012764, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -17403,6 +19507,7 @@ GameObject:
   - component: {fileID: 1852017783}
   - component: {fileID: 1852017782}
   - component: {fileID: 1852017781}
+  - component: {fileID: 1852017784}
   m_Layer: 0
   m_Name: Circle (47)
   m_TagString: Untagged
@@ -17438,6 +19543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 81
   nextNodes:
   - {fileID: 1537739217}
 --- !u!23 &1852017782
@@ -17497,6 +19603,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1852017779}
   m_Mesh: {fileID: -2124705421725058983, guid: b5fccbccc63f10148a8a61fb7b43973d, type: 3}
+--- !u!65 &1852017784
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852017779}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0, y: -0.000000007449965, z: 0.000082589024}
 --- !u!1 &1852993844 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6242478326235911358, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -17617,6 +19744,7 @@ GameObject:
   - component: {fileID: 1862723495}
   - component: {fileID: 1862723494}
   - component: {fileID: 1862723493}
+  - component: {fileID: 1862723497}
   m_Layer: 0
   m_Name: Circle (63)
   m_TagString: Untagged
@@ -17637,6 +19765,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 2
+  nodeIndex: 82
   nextNodes:
   - {fileID: 856785472}
 --- !u!23 &1862723494
@@ -17711,6 +19840,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -94.977, y: 0, z: 0}
+--- !u!65 &1862723497
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862723492}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0, y: 6.153362e-13, z: 0.000082589024}
 --- !u!1 &1863796210
 GameObject:
   m_ObjectHideFlags: 0
@@ -17723,6 +19873,7 @@ GameObject:
   - component: {fileID: 1863796213}
   - component: {fileID: 1863796212}
   - component: {fileID: 1863796211}
+  - component: {fileID: 1863796215}
   m_Layer: 0
   m_Name: Circle (32)
   m_TagString: Untagged
@@ -17743,6 +19894,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 83
   nextNodes:
   - {fileID: 0}
   - {fileID: 0}
@@ -17818,6 +19970,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -74.891, y: 0, z: 0}
+--- !u!65 &1863796215
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863796210}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492531, z: 0.00016517803}
+  m_Center: {x: -0.0000000037252903, y: -0.0000000055879354, z: 0.00008259647}
 --- !u!1 &1863952520 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 419445750473971686, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -18131,6 +20304,7 @@ GameObject:
   - component: {fileID: 1892152297}
   - component: {fileID: 1892152296}
   - component: {fileID: 1892152295}
+  - component: {fileID: 1892152299}
   m_Layer: 0
   m_Name: Circle (55)
   m_TagString: Untagged
@@ -18151,6 +20325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 84
   nextNodes:
   - {fileID: 1226537657}
 --- !u!23 &1892152296
@@ -18225,6 +20400,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -94.977, y: 0, z: 0}
+--- !u!65 &1892152299
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892152294}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0.0000000037252903, y: 6.153362e-13, z: 0.000082589024}
 --- !u!1 &1893921019 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7056507436491413076, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -18372,6 +20568,7 @@ GameObject:
   - component: {fileID: 1910876846}
   - component: {fileID: 1910876845}
   - component: {fileID: 1910876844}
+  - component: {fileID: 1910876848}
   m_Layer: 0
   m_Name: Circle (13)
   m_TagString: Untagged
@@ -18392,6 +20589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 0
+  nodeIndex: 85
   nextNodes:
   - {fileID: 1949907538}
 --- !u!23 &1910876845
@@ -18466,6 +20664,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1910876848
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910876843}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: 0, y: -0.0000000041909516, z: 0.00008258901}
 --- !u!1 &1920164936 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1193330709666945718, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -18675,10 +20894,105 @@ MonoBehaviour:
   waitBeforeMoving: 1.5
   players:
   - {fileID: 695227023}
+  namaMiniGames:
+  - tarik_tambang
   vcamOverview: {fileID: 1544065142}
   vcamPlayer: {fileID: 1292402334}
   vcamDice: {fileID: 867814534}
   physicalDice: {fileID: 1457217898}
+  allBoardNodes:
+  - {fileID: 12551960}
+  - {fileID: 21059997}
+  - {fileID: 23107387}
+  - {fileID: 38965438}
+  - {fileID: 82511043}
+  - {fileID: 126197827}
+  - {fileID: 133126097}
+  - {fileID: 188769684}
+  - {fileID: 221928344}
+  - {fileID: 243750058}
+  - {fileID: 288362912}
+  - {fileID: 343843324}
+  - {fileID: 365502546}
+  - {fileID: 396043019}
+  - {fileID: 424969180}
+  - {fileID: 480056797}
+  - {fileID: 530655289}
+  - {fileID: 553363275}
+  - {fileID: 651895994}
+  - {fileID: 659231879}
+  - {fileID: 708938862}
+  - {fileID: 755489922}
+  - {fileID: 766443897}
+  - {fileID: 769517605}
+  - {fileID: 772081160}
+  - {fileID: 784635752}
+  - {fileID: 842744606}
+  - {fileID: 856785472}
+  - {fileID: 869270352}
+  - {fileID: 872240607}
+  - {fileID: 873918567}
+  - {fileID: 879855102}
+  - {fileID: 889129290}
+  - {fileID: 892993001}
+  - {fileID: 930613329}
+  - {fileID: 945340197}
+  - {fileID: 958174252}
+  - {fileID: 964167871}
+  - {fileID: 967300482}
+  - {fileID: 980918270}
+  - {fileID: 982177501}
+  - {fileID: 992158079}
+  - {fileID: 1038733028}
+  - {fileID: 1114943873}
+  - {fileID: 1152386320}
+  - {fileID: 1161188997}
+  - {fileID: 1166256167}
+  - {fileID: 1184071603}
+  - {fileID: 1186400536}
+  - {fileID: 1226537657}
+  - {fileID: 1248910806}
+  - {fileID: 1251301285}
+  - {fileID: 1277124751}
+  - {fileID: 1278898122}
+  - {fileID: 1279516579}
+  - {fileID: 1283201410}
+  - {fileID: 1288771714}
+  - {fileID: 1403230361}
+  - {fileID: 1407085012}
+  - {fileID: 1437433191}
+  - {fileID: 1447035807}
+  - {fileID: 1474967676}
+  - {fileID: 1490486552}
+  - {fileID: 1526151526}
+  - {fileID: 1526260651}
+  - {fileID: 1529600056}
+  - {fileID: 1537739217}
+  - {fileID: 1561800990}
+  - {fileID: 1562870358}
+  - {fileID: 1581470372}
+  - {fileID: 1587031162}
+  - {fileID: 1604315661}
+  - {fileID: 1625308290}
+  - {fileID: 1627753224}
+  - {fileID: 1644035950}
+  - {fileID: 1772815034}
+  - {fileID: 1779143819}
+  - {fileID: 1786298952}
+  - {fileID: 1788374857}
+  - {fileID: 1807682595}
+  - {fileID: 1824407698}
+  - {fileID: 1852017781}
+  - {fileID: 1862723493}
+  - {fileID: 1863796211}
+  - {fileID: 1892152295}
+  - {fileID: 1910876844}
+  - {fileID: 1949907538}
+  - {fileID: 1973244747}
+  - {fileID: 2001366285}
+  - {fileID: 2028617404}
+  - {fileID: 2029126940}
+  - {fileID: 2085237959}
 --- !u!1 &1949907537
 GameObject:
   m_ObjectHideFlags: 0
@@ -18691,6 +21005,7 @@ GameObject:
   - component: {fileID: 1949907540}
   - component: {fileID: 1949907539}
   - component: {fileID: 1949907538}
+  - component: {fileID: 1949907542}
   m_Layer: 0
   m_Name: Circle (29)
   m_TagString: Untagged
@@ -18711,6 +21026,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 86
   nextNodes:
   - {fileID: 1161188997}
 --- !u!23 &1949907539
@@ -18785,6 +21101,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -100.784, y: 0, z: 0}
+--- !u!65 &1949907542
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949907537}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517805}
+  m_Center: {x: 0, y: -0.0000000018626451, z: 0.000082596474}
 --- !u!1 &1951022731 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5864779441581841219, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -18932,6 +21269,7 @@ GameObject:
   - component: {fileID: 1973244749}
   - component: {fileID: 1973244748}
   - component: {fileID: 1973244747}
+  - component: {fileID: 1973244751}
   m_Layer: 0
   m_Name: Circle (52)
   m_TagString: Untagged
@@ -18952,6 +21290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 87
   nextNodes:
   - {fileID: 133126097}
 --- !u!23 &1973244748
@@ -19026,6 +21365,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -94.977, y: 0, z: 0}
+--- !u!65 &1973244751
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973244746}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
+  m_Center: {x: 0.0000000013969839, y: -0.000000014900546, z: 0.00008259275}
 --- !u!1 &1980644143 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 190364298511932055, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -19065,6 +21425,7 @@ GameObject:
   - component: {fileID: 2001366287}
   - component: {fileID: 2001366286}
   - component: {fileID: 2001366285}
+  - component: {fileID: 2001366289}
   m_Layer: 0
   m_Name: Circle (12)
   m_TagString: Untagged
@@ -19085,6 +21446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 88
   nextNodes:
   - {fileID: 1910876844}
 --- !u!23 &2001366286
@@ -19159,6 +21521,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2001366289
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001366284}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: 0.0000000018626451, y: 1.1736606e-18, z: 0.00008258901}
 --- !u!1 &2015009215 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5445883315105093494, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -19225,6 +21608,7 @@ GameObject:
   - component: {fileID: 2028617406}
   - component: {fileID: 2028617405}
   - component: {fileID: 2028617404}
+  - component: {fileID: 2028617408}
   m_Layer: 0
   m_Name: Circle (27)
   m_TagString: Untagged
@@ -19245,6 +21629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 3
+  nodeIndex: 89
   nextNodes:
   - {fileID: 1283201410}
 --- !u!23 &2028617405
@@ -19319,6 +21704,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2028617408
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028617403}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: 0.0000000037252903, y: -0.000000007450581, z: 0.00008259646}
 --- !u!1 &2029126939
 GameObject:
   m_ObjectHideFlags: 0
@@ -19331,6 +21737,7 @@ GameObject:
   - component: {fileID: 2029126942}
   - component: {fileID: 2029126941}
   - component: {fileID: 2029126940}
+  - component: {fileID: 2029126944}
   m_Layer: 0
   m_Name: Circle (80)
   m_TagString: Untagged
@@ -19351,6 +21758,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 90
   nextNodes:
   - {fileID: 659231879}
 --- !u!23 &2029126941
@@ -19425,6 +21833,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: -90.288, y: 176.267, z: -170.453}
+--- !u!65 &2029126944
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029126939}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492534, y: 0.0019492536, z: 0.00016517813}
+  m_Center: {x: 0.0000000018636739, y: 2.1536765e-12, z: 0.00008258903}
 --- !u!1 &2049393876 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3846745844435704436, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -19545,6 +21974,7 @@ GameObject:
   - component: {fileID: 2085237961}
   - component: {fileID: 2085237960}
   - component: {fileID: 2085237959}
+  - component: {fileID: 2085237963}
   m_Layer: 0
   m_Name: Circle (16)
   m_TagString: Untagged
@@ -19565,6 +21995,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
+  nodeIndex: 91
   nextNodes:
   - {fileID: 945340197}
 --- !u!23 &2085237960
@@ -19633,12 +22064,33 @@ Transform:
   m_GameObject: {fileID: 2085237958}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -5.307, y: 9.549, z: 2.295}
+  m_LocalPosition: {x: -5.582, y: 9.505, z: 2.295}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 530655290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2085237963
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085237958}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0019492536, y: 0.001949253, z: 0.00016517802}
+  m_Center: {x: 0, y: 1.1736606e-18, z: 0.000082592735}
 --- !u!1 &2087009785 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5445420008601060659, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -19782,13 +22234,289 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 34267792215532428, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 87513256408481209, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 99932454649857529, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 111784991021844736, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 116761480108424157, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 182996521831788217, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 234455315806727049, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 242450228224006328, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 297339302386677845, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 401152655847300354, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 457214993585177407, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 460675571820011171, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 495891079475115081, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 557757309720187325, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 695365979365912803, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 747251145945171635, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 756138404273049649, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 820422129892073360, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 889633691807822420, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035223718043710671, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1099486771346212425, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1136081730335962115, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170233618935140942, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1174146409429966418, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1311219664898114469, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1370297738762188859, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1376581643495695075, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400454817589887715, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412845445897684368, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470756136378322240, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471455069444203690, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1480692726568078847, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1515418225550978007, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559458020734526583, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602814559978273500, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666637693842689942, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699354899692097814, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1775229133127310067, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854715623918870598, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1869863562891667952, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972474366363000175, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1987613802133013737, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2118446657380424987, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2147560699518110456, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2148729533105735794, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162477469057616509, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2284048582494744081, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317451729509547104, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2453025031247232245, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2489093192041884503, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536262565366910399, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551925500081191863, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2574019420559828327, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2750696926696815269, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2757416980466102185, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882879579712320139, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974133592115057435, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3010315232863259038, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090255784274228389, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3129314450684112309, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3149941088072300392, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3175309217291313622, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222532453566370856, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3249480653160471159, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326992884717845907, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3352727018357476742, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3470874286193156459, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472309079992158601, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473576040930745949, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3535596648099303608, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17.111
       objectReference: {fileID: 0}
     - target: {fileID: 3535596648099303608, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 21.109
+      value: 21.404
       objectReference: {fileID: 0}
     - target: {fileID: 3535596648099303608, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -19822,14 +22550,618 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3579249412197176074, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3601301864980618838, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3624034632147869242, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3634086499439897192, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635223048674911181, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3679575412392454603, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3762090883852262893, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3854470917392219124, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3868849183996709651, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887763347232916379, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3895938969703179354, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3901062685812757975, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068500072816795724, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4137568928038645860, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4155762904722993844, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4173534480260146900, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4190320020524354820, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4204997316940466690, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
       propertyPath: m_Name
       value: Lari_Lanang_Fix
+      objectReference: {fileID: 0}
+    - target: {fileID: 4204997316940466690, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4308726896193047145, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4323580431856978525, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345953441172146116, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4347663758406886861, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4357213965563862955, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4514985194283565874, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4521156784599672664, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550312408009237324, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576131292939311494, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584184793427515608, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4631837705970588461, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4677083818195898655, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4707716901373613433, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763470257844180237, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4827231736560141945, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867238755291916608, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4975231990664913155, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4989560611008676514, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005705222724776636, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5056512931395340249, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5073753328468283213, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108770459109302322, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5129700242306812133, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5131328509441816909, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5135613081866156544, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5321993245704784929, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355690019536207505, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5442094536980875651, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5461261326693199459, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5541622403352131737, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5543887994097054439, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5582089621151010063, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5611369550176264467, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648626679105046348, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5666531592585967701, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669225804349000118, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5693575818762201845, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5700735784817939606, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5756534914331228501, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5764923206728552515, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5784857873125200926, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5788097314615581943, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5879843332420605543, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931411166687577672, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5942464578229263978, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960883789984005401, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6121421085369351692, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6131971269588449364, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6145786195056720424, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6171505745032282728, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6222516780200094564, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6267144951157435161, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282688703482301811, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6311901243707886106, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6326217470998202305, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6340674220850711495, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6343915111066822595, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6422752144837654443, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6423579729321826613, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465142651191425932, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6470341425677529037, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6472440830121142931, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6473945844056490431, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6573863561118316608, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638171288605735006, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644061236788437992, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6710926683445284196, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6751755713200237084, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6857458726929091961, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6866312567412454646, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6872185189279549408, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6893039296787648695, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6981112413416455928, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6989193509782866403, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7008663951481548194, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7021421965929104817, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7043468932914042518, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: yOffset
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7043468932914042518, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
       propertyPath: currentNode
       value: 
       objectReference: {fileID: 1490486552}
+    - target: {fileID: 7057425315538010791, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7130698626874100021, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7154693211933268206, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7282080338738212328, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7295583416681070471, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7311852242541947452, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402970864049013025, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7409583128190020125, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7429930986728052409, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7443555071028878961, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7459160768825918639, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7600565803940170896, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7609931313829798667, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7623771425857802870, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7642103430661655201, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698581930352856834, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7704539009276334762, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7730105607455835431, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7785267261814691052, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817782957189191785, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7840012810579673238, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7892253772976887713, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926460802378814228, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7993244876623816912, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8165558218286843952, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254779573646156911, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262030971866443817, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8291157228198341437, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297438016737302341, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309689548858937336, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8320201049626947419, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8326244080265044937, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8328764222085208008, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8360539700352178500, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8371025530153647292, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8387827468762684623, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8419050425339663575, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8471754196688974723, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8533937957397373680, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598392326924127174, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611178938266902538, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8617070005709693209, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8642280475542260356, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8659083960761447285, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8736108503736049802, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8737641452919776099, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8920085003903566925, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939851201270807092, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8975431350998313258, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016946931579994453, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9095163601487731948, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9095500283216378823, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9128250707100941960, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9152579126395414336, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9190628496745502452, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9219640507686010707, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19854,3 +23186,4 @@ SceneRoots:
   - {fileID: 8303291}
   - {fileID: 290471189}
   - {fileID: 694455059}
+  - {fileID: 1694538385}
