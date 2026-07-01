@@ -5,6 +5,12 @@ public class PlayerMovement : MonoBehaviour
 {
     public BoardNode currentNode; // Posisi kotak saat ini
     public float moveSpeed = 5f;
+    [Header("Pengaturan Animasi Gerak")]
+    public float yOffset = 0.5f;
+    public float rotationSpeed = 10f; // Kecepatan putar menghadap tujuan
+    
+    [Header("Referensi Visual")]
+    public PlayerVisualController visualController; // Referensi untuk memicu animasi
     
     [HideInInspector] public bool isMoving = false;
     public bool isWaitingForBranch = false;
@@ -46,21 +52,54 @@ public class PlayerMovement : MonoBehaviour
                 currentNode = currentNode.nextNodes[0];
             }
 
-            // 3. Bergerak ke target
-            Vector3 target = currentNode.transform.position;
-            target.y += 1f; // Angkat sedikit agar kapsul berdiri di atas kotak, tidak tenggelam
+            // 3. Bergerak lurus mendatar tanpa fisika
+            Vector3 startPos = transform.position;
+            Vector3 target = currentNode.transform.position + new Vector3(0, yOffset, 0);
 
-            while (Vector3.Distance(transform.position, target) > 0.05f)
+            // Hadap ke arah target secara perlahan
+            Vector3 direction = (target - startPos).normalized;
+            direction.y = 0; // Kunci sumbu Y agar tidak mendongak/menunduk
+            if (direction != Vector3.zero)
             {
-                transform.position = Vector3.MoveTowards(transform.position, target, moveSpeed * Time.deltaTime);
+                Quaternion targetRot = Quaternion.LookRotation(direction);
+                while (Quaternion.Angle(transform.rotation, targetRot) > 1f)
+                {
+                    transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * rotationSpeed);
+                    yield return null;
+                }
+                transform.rotation = targetRot;
+            }
+
+            // Memicu animasi jalan
+            if (visualController != null) visualController.AturPergerakan(true);
+
+            float timeElapsed = 0f;
+            // Menghitung estimasi waktu perjalanan berdasarkan jarak dan moveSpeed
+            float distance = Vector3.Distance(startPos, target);
+            float duration = distance / moveSpeed;
+
+            while (timeElapsed <= duration)
+            {
+                timeElapsed += Time.deltaTime;
+                float t = Mathf.Clamp01(timeElapsed / duration);
+
+                // Posisi dasar garis lurus tanpa fisika maupun lompatan
+                Vector3 basePos = Vector3.Lerp(startPos, target, t);
+
+                transform.position = basePos;
                 yield return null;
             }
 
             transform.position = target;
+            
+            // Menghentikan animasi jalan sesaat jika ada jeda antar petak
+            if (visualController != null) visualController.AturPergerakan(false);
             remainingSteps--; 
             yield return new WaitForSeconds(0.1f); 
         }
 
+        // Pastikan animasi benar-benar mati setelah selesai giliran
+        if (visualController != null) visualController.AturPergerakan(false);
         isMoving = false;
         Debug.Log("Giliran Selesai!");
     }
@@ -72,6 +111,39 @@ public class PlayerMovement : MonoBehaviour
         {
             chosenNextNode = currentNode.nextNodes[branchIndex];
             isWaitingForBranch = false; // Lanjutkan pergerakan
+        }
+    }
+
+    // Fungsi untuk menyambut giliran (menghadap kamera dan memainkan animasi)
+    public void SambutGiliran(Vector3 posisiKamera)
+    {
+        StartCoroutine(ProsesMenolehKamera(posisiKamera));
+    }
+
+    private IEnumerator ProsesMenolehKamera(Vector3 posisiKamera)
+    {
+        // 1. Hitung arah menghadap kamera dengan mengabaikan sumbu Y (ketinggian)
+        Vector3 direction = (posisiKamera - transform.position).normalized;
+        direction.y = 0f; 
+        
+        if (direction != Vector3.zero)
+        {
+            Quaternion targetRot = Quaternion.LookRotation(direction);
+            
+            // Putar badan secara halus sampai menghadap kamera
+            while (Quaternion.Angle(transform.rotation, targetRot) > 1f)
+            {
+                // Menggunakan kecepatan rotasi yang lebih lambat agar terlihat elegan
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * (rotationSpeed * 0.5f));
+                yield return null;
+            }
+            transform.rotation = targetRot;
+        }
+
+        // 2. Mainkan animasi selebrasi / giliran setelah posisi pas
+        if (visualController != null)
+        {
+            visualController.MulaiGiliran();
         }
     }
 }
