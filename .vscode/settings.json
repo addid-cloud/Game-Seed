@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "Game-Seed.slnx"
+    "dotnet.defaultSolution": "Game Seed.slnx"
 }
