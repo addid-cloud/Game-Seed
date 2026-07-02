@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TarikTambangManager : MonoBehaviour
 {
@@ -10,6 +11,12 @@ public class TarikTambangManager : MonoBehaviour
     [Header("Pengaturan Permainan")]
     public float kekuatanTarik = 0.5f;
     public float batasMenang = 5f;
+
+    [Header("Pindah Scene")]
+    [Tooltip("Nama scene papan permainan monopoli Anda")]
+    public string namaSceneUtama = "MapUtama";
+    [Tooltip("Jeda waktu sebelum pindah (agar pemain sempat melihat animasi jatuh)")]
+    public float jedaPindahScene = 1.5f;
 
     [Header("Arah Tarikan (World Space)")]
     public Vector3 arahKiri = Vector3.back;
@@ -82,6 +89,24 @@ public class TarikTambangManager : MonoBehaviour
                 if (animPemainKiri != null)
                     animPemainKiri.CrossFade(stateKalah, 0.2f);
             }
+
+            // Langsung bersiap kembali ke scene utama
+            StartCoroutine(ProsesKembaliKeUtama());
+        }
+    }
+
+    private System.Collections.IEnumerator ProsesKembaliKeUtama()
+    {
+        // Beri sedikit jeda agar pemain bisa melihat siapa yang jatuh
+        yield return new WaitForSeconds(jedaPindahScene);
+
+        if (!string.IsNullOrEmpty(namaSceneUtama))
+        {
+            SceneManager.LoadScene(namaSceneUtama);
+        }
+        else
+        {
+            Debug.LogError("Gagal pindah scene: 'namaSceneUtama' di Inspector belum diisi!");
         }
     }
 }

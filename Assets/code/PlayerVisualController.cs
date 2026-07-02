@@ -11,6 +11,7 @@ public class PlayerVisualController : MonoBehaviour
     // Trik Optimasi: Menggunakan Hash untuk nama parameter Animator agar lebih ringan
     private readonly int isMovingHash = Animator.StringToHash("isMoving");
     private readonly int triggerGiliranHash = Animator.StringToHash("mulaiGiliran");
+    private readonly int triggerLompatVertikalHash = Animator.StringToHash("TriggerLompatVertikal");
     private readonly int triggerSelebrasiHash = Animator.StringToHash("selebrasi");
 
     // -------------------------------------------------------------
@@ -24,6 +25,27 @@ public class PlayerVisualController : MonoBehaviour
         
         // Memutar efek visual (misal: cahaya muncul di bawah kaki)
         if (efekGiliranMulai != null) efekGiliranMulai.Play();
+    }
+
+    // Dipanggil saat karakter pindah ke ketinggian yang berbeda
+    public void LompatVertikal()
+    {
+        if (anim != null)
+        {
+            // Reset trigger giliran agar tidak bertabrakan
+            anim.ResetTrigger(triggerGiliranHash);
+            anim.SetTrigger(triggerLompatVertikalHash);
+        }
+    }
+
+    // Dipanggil saat coroutine lompat selesai untuk memaksa karakter kembali bersiap
+    public void AkhiriLompatVertikal()
+    {
+        if (anim != null)
+        {
+            // Paksa transisi mulus ke state "Idle" agar animasi tidak nyangkut
+            anim.CrossFade("Idle", 0.1f);
+        }
     }
 
     // 2. Dipanggil saat karakter bergerak antar petak (True = Lari, False = Berhenti)

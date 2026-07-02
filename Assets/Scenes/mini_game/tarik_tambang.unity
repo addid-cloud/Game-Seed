@@ -384,6 +384,8 @@ MonoBehaviour:
   animPemainKanan: {fileID: 0}
   kekuatanTarik: 0.5
   batasMenang: 5
+  namaSceneUtama: NO TOUCH
+  jedaPindahScene: 1.5
   arahKiri: {x: 0, y: 0, z: -1}
   arahKanan: {x: 0, y: 0, z: 1}
 --- !u!4 &640313996 stripped

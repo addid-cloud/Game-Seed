@@ -70,54 +70,62 @@ public class PlayerMovement : MonoBehaviour
                 transform.rotation = targetRot;
             }
 
-            // Memicu animasi jalan
-            if (visualController != null) visualController.AturPergerakan(true);
+            // Cek pengaturan lompat yang sudah kita atur manual di Inspector node tujuan
+            bool isLompatVertikal = currentNode.harusLompatKeSini;
 
-            float timeElapsed = 0f;
-            // Menghitung estimasi waktu perjalanan berdasarkan jarak dan moveSpeed
-            float distance = Vector3.Distance(startPos, target);
-            float duration = distance / moveSpeed;
-
-            while (timeElapsed <= duration)
+            if (isLompatVertikal)
             {
-                timeElapsed += Time.deltaTime;
-                float t = Mathf.Clamp01(timeElapsed / duration);
-
-                // 1. Hitung posisi dasar X dan Z menggunakan Lerp
-                Vector3 currentPos = Vector3.Lerp(startPos, target, t);
-
-                // 2. Siapkan Raycast dari posisi tinggi untuk mendeteksi tanah di bawahnya
-                float rayOriginY = Mathf.Max(startPos.y, target.y) + 10f;
-                Vector3 rayOrigin = new Vector3(currentPos.x, rayOriginY, currentPos.z);
-
-                // 3. Gunakan LayerMask untuk MENGABAIKAN layer "Player"
-                int layerMask = ~LayerMask.GetMask("Player");
-
-                // 4. Tembakkan Raycast ke bawah (Vector3.down)
-                if (Physics.Raycast(rayOrigin, Vector3.down, out RaycastHit hit, 20f, layerMask))
+                // Eksekusi lompatan bertenaga (ketinggian lengkungan 1.5f, durasi 0.5 detik - terasa kenceng)
+                yield return StartCoroutine(LompatBertenaga(target, 1.5f, 0.5f));
+            }
+            else
+            {
+                if (visualController != null)
                 {
-                    // Jika kena tanah, posisikan Y karakter di titik sentuh tanah tersebut + yOffset
-                    currentPos.y = hit.point.y + yOffset;
-                }
-                else
-                {
-                    // Fallback jika tidak mendeteksi tanah
-                    currentPos.y = Mathf.Lerp(startPos.y, target.y, t);
+                    visualController.AturPergerakan(true); // Mainkan lari normal
                 }
 
-                // 6. Terakhir, terapkan ke posisi
-                transform.position = currentPos;
-                yield return null;
-            }
+                float timeElapsed = 0f;
+                // Menghitung estimasi waktu perjalanan berdasarkan jarak dan moveSpeed
+                float distance = Vector3.Distance(startPos, target);
+                float duration = distance / moveSpeed;
 
-            // Memastikan posisi akhir di target juga presisi di atas tanah
-            Vector3 finalPos = target;
-            float finalRayY = finalPos.y + 10f;
-            if (Physics.Raycast(new Vector3(finalPos.x, finalRayY, finalPos.z), Vector3.down, out RaycastHit finalHit, 20f, ~LayerMask.GetMask("Player")))
-            {
-                finalPos.y = finalHit.point.y + yOffset;
+                while (timeElapsed <= duration)
+                {
+                    timeElapsed += Time.deltaTime;
+                    float t = Mathf.Clamp01(timeElapsed / duration);
+
+                    // Hitung posisi dasar menggunakan Lerp
+                    Vector3 currentPos = Vector3.Lerp(startPos, target, t);
+
+                    // Siapkan Raycast dari posisi tinggi
+                    float rayOriginY = Mathf.Max(startPos.y, target.y) + 10f;
+                    Vector3 rayOrigin = new Vector3(currentPos.x, rayOriginY, currentPos.z);
+                    int layerMask = ~LayerMask.GetMask("Player");
+
+                    // Raycast ke bawah
+                    if (Physics.Raycast(rayOrigin, Vector3.down, out RaycastHit hit, 20f, layerMask))
+                    {
+                        currentPos.y = hit.point.y + yOffset;
+                    }
+                    else
+                    {
+                        currentPos.y = Mathf.Lerp(startPos.y, target.y, t);
+                    }
+
+                    transform.position = currentPos;
+                    yield return null;
+                }
+
+                // Memastikan posisi akhir di target juga presisi di atas tanah
+                Vector3 finalPos = target;
+                float finalRayY = finalPos.y + 10f;
+                if (Physics.Raycast(new Vector3(finalPos.x, finalRayY, finalPos.z), Vector3.down, out RaycastHit finalHit, 20f, ~LayerMask.GetMask("Player")))
+                {
+                    finalPos.y = finalHit.point.y + yOffset;
+                }
+                transform.position = finalPos;
             }
-            transform.position = finalPos;
             
             // Menghentikan animasi jalan sesaat jika ada jeda antar petak
             if (visualController != null) visualController.AturPergerakan(false);
@@ -129,6 +137,52 @@ public class PlayerMovement : MonoBehaviour
         if (visualController != null) visualController.AturPergerakan(false);
         isMoving = false;
         Debug.Log("Giliran Selesai!");
+    }
+
+    private IEnumerator LompatBertenaga(Vector3 targetPos, float height, float duration)
+    {
+        // 3. Integrasi: Pastikan animasi lompat vertikal dipanggil di awal
+        if (visualController != null)
+        {
+            visualController.AturPergerakan(false);
+            visualController.LompatVertikal(); // Memanggil anim.SetTrigger("TriggerLompatVertikal")
+        }
+
+        Vector3 startPos = transform.position;
+        float timeElapsed = 0f;
+
+        while (timeElapsed < duration)
+        {
+            timeElapsed += Time.deltaTime;
+            // Pastikan t tidak melebihi 1
+            float t = Mathf.Clamp01(timeElapsed / duration);
+
+            // Lerp linear untuk posisi dasar X dan Z
+            Vector3 currentPos = Vector3.Lerp(startPos, targetPos, t);
+
+            // 1. Pergerakan Parabola (busur)
+            // Rumus parabola dasar: 4 * height * t * (1 - t)
+            // Akan bernilai 0 di t=0, bernilai 'height' di t=0.5, dan 0 di t=1.
+            float parabola = 4f * height * t * (1f - t);
+            
+            // Posisi Y dasar adalah lerp linear antara Y asal dan Y tujuan
+            float baseY = Mathf.Lerp(startPos.y, targetPos.y, t);
+            
+            // Tambahkan lengkungan parabola ke atas base Y
+            currentPos.y = baseY + parabola;
+
+            transform.position = currentPos;
+            yield return null;
+        }
+
+        // 4. Presisi: Pastikan posisi akhir karakter persis di targetPos
+        transform.position = targetPos;
+
+        // Beri tahu visual controller bahwa lompatan fisik sudah selesai
+        if (visualController != null)
+        {
+            visualController.AkhiriLompatVertikal();
+        }
     }
 
     // Fungsi untuk memilih jalur saat di persimpangan

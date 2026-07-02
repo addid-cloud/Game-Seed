@@ -12,6 +12,10 @@ public class BoardNode : MonoBehaviour
     [Header("Pengaturan Petak")]
     public SpaceType tipePetak = SpaceType.StaticSpace;
     public int nodeIndex;
+    
+    [Header("Navigasi Khusus")]
+    [Tooltip("Centang jika karakter harus MELOMPAT untuk mencapai petak ini")]
+    public bool harusLompatKeSini = false;
 
     [Header("Jalur Selanjutnya")]
     public List<BoardNode> nextNodes = new List<BoardNode>();

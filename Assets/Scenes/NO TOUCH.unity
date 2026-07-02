@@ -562,6 +562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 0
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 2001366285}
 --- !u!23 &12551961
@@ -691,6 +692,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 1
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 755489922}
 --- !u!23 &21059998
@@ -847,6 +849,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 2
+  harusLompatKeSini: 1
   nextNodes:
   - {fileID: 1772815034}
 --- !u!23 &23107388
@@ -914,13 +917,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 23107386}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0.901, y: 10.456, z: 11.036}
+  m_LocalRotation: {x: -0.7059849, y: -0.039816685, z: 0.039816685, w: 0.7059849}
+  m_LocalPosition: {x: 2.864, y: 12.293, z: 12.963}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 530655290}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -83.544, y: -90, z: 90}
 --- !u!65 &23107391
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1003,6 +1006,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 2
   nodeIndex: 3
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1581470372}
 --- !u!23 &38965439
@@ -1071,7 +1075,7 @@ Transform:
   m_GameObject: {fileID: 38965437}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -5.686, y: 9.466, z: 5.124}
+  m_LocalPosition: {x: -6.252, y: 9.466, z: 5.124}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1353,6 +1357,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 4
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 769517605}
 --- !u!23 &82511044
@@ -1421,7 +1426,7 @@ Transform:
   m_GameObject: {fileID: 82511042}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -6.961, y: 9.647, z: 8.237}
+  m_LocalPosition: {x: -7.5270004, y: 9.705, z: 8.237}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1512,15 +1517,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1160943982923511622, guid: 1809c7a5ce1c2464ca26db1a64fe62bc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.231
+      value: -9.34
       objectReference: {fileID: 0}
     - target: {fileID: 1160943982923511622, guid: 1809c7a5ce1c2464ca26db1a64fe62bc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 23.984
+      value: 26.14
       objectReference: {fileID: 0}
     - target: {fileID: 1160943982923511622, guid: 1809c7a5ce1c2464ca26db1a64fe62bc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -29.22
+      value: -0.8900001
       objectReference: {fileID: 0}
     - target: {fileID: 1160943982923511622, guid: 1809c7a5ce1c2464ca26db1a64fe62bc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1667,6 +1672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 5
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1251301285}
 --- !u!23 &126197828
@@ -1796,6 +1802,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 6
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 873918567}
 --- !u!23 &133126098
@@ -1864,7 +1871,7 @@ Transform:
   m_GameObject: {fileID: 133126096}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7371445, y: -0, z: -0, w: 0.6757352}
-  m_LocalPosition: {x: 2.825, y: 9.97, z: 19.08}
+  m_LocalPosition: {x: 3.897, y: 9.97, z: 18.25}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2344,6 +2351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 7
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 889129290}
 --- !u!23 &188769685
@@ -2412,7 +2420,7 @@ Transform:
   m_GameObject: {fileID: 188769683}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7371445, y: -0, z: -0, w: 0.6757352}
-  m_LocalPosition: {x: 13.034, y: 12.681, z: 19.491}
+  m_LocalPosition: {x: 13.034, y: 12.731999, z: 19.491}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2551,6 +2559,205 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 190070198}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &202524908
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 202524909}
+  - component: {fileID: 202524912}
+  - component: {fileID: 202524911}
+  - component: {fileID: 202524910}
+  m_Layer: 0
+  m_Name: Nameplate
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &202524909
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202524908}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 695227024}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 3.81}
+  m_SizeDelta: {x: 20, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &202524910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202524908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349f26e3ed363c94cb71703a3f428cf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerNameplate
+  nameText: {fileID: 202524911}
+  playerName: Udean
+  gunakanFloating: 1
+  kecepatanFloat: 2
+  amplitudoFloat: 0.15
+--- !u!114 &202524911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202524908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshPro
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 29.31
+  m_fontSizeBase: 29.31
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 202524912}
+  m_maskType: 0
+--- !u!23 &202524912
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202524908}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &203181642 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5960428725573276147, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -2612,6 +2819,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 8
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 0}
   - {fileID: 0}
@@ -2681,7 +2889,7 @@ Transform:
   m_GameObject: {fileID: 221928343}
   serializedVersion: 2
   m_LocalRotation: {x: -0.70442516, y: 0.035654396, z: 0.036066376, w: 0.7079642}
-  m_LocalPosition: {x: 4.085, y: 11.048, z: 26.316}
+  m_LocalPosition: {x: 3.937, y: 11.048, z: 26.369}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2829,6 +3037,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 9
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 708938862}
 --- !u!23 &243750059
@@ -3039,6 +3248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 10
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 424969180}
 --- !u!23 &288362913
@@ -3107,7 +3317,7 @@ Transform:
   m_GameObject: {fileID: 288362911}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7371445, y: -0, z: -0, w: 0.6757352}
-  m_LocalPosition: {x: 14.54, y: 12.31, z: 14.429}
+  m_LocalPosition: {x: 14.54, y: 12.373, z: 14.429}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3134,107 +3344,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0019492536, y: 0.0019492534, z: 0.00016517806}
   m_Center: {x: 0.000000014901161, y: -0.000000003724675, z: 0.000082596474}
---- !u!1 &290471185
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 290471189}
-  - component: {fileID: 290471188}
-  - component: {fileID: 290471187}
-  - component: {fileID: 290471186}
-  m_Layer: 5
-  m_Name: Canvas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &290471186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 290471185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GraphicRaycaster
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &290471187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 290471185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
---- !u!223 &290471188
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 290471185}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
---- !u!224 &290471189
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 290471185}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
 --- !u!1 &307381264 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2045301850186572394, guid: 4f2d9322d72ff08439e6864879ca4619, type: 3}
@@ -3424,6 +3533,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 11
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 651895994}
   - {fileID: 553363275}
@@ -3620,6 +3730,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 12
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1279516579}
 --- !u!23 &365502547
@@ -3884,6 +3995,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 6
   nodeIndex: 13
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 82511043}
 --- !u!23 &396043020
@@ -3952,7 +4064,7 @@ Transform:
   m_GameObject: {fileID: 396043018}
   serializedVersion: 2
   m_LocalRotation: {x: -0.8311588, y: -0, z: -0, w: 0.5560352}
-  m_LocalPosition: {x: -6.5630016, y: 9.559, z: 7.517}
+  m_LocalPosition: {x: -7.129002, y: 9.559, z: 7.517}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4348,6 +4460,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 0
   nodeIndex: 14
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1437433191}
 --- !u!23 &424969181
@@ -4416,7 +4529,7 @@ Transform:
   m_GameObject: {fileID: 424969179}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7371445, y: -0, z: -0, w: 0.6757352}
-  m_LocalPosition: {x: 14.759, y: 12.487, z: 16.289}
+  m_LocalPosition: {x: 14.759, y: 12.553, z: 16.289}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4567,6 +4680,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 15
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 396043019}
 --- !u!23 &480056798
@@ -4635,7 +4749,7 @@ Transform:
   m_GameObject: {fileID: 480056796}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -6.478, y: 9.426, z: 6.543}
+  m_LocalPosition: {x: -7.0440006, y: 9.426, z: 6.543}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5661,6 +5775,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 16
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 0}
   - {fileID: 0}
@@ -5799,6 +5914,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 17
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1562870358}
 --- !u!23 &553363276
@@ -6279,6 +6395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 18
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1604315661}
 --- !u!23 &651895995
@@ -6435,6 +6552,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 19
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1526151526}
 --- !u!23 &659231880
@@ -6797,6 +6915,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 7
   nodeIndex: 20
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1529600056}
 --- !u!23 &708938863
@@ -7126,6 +7245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 21
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 2028617404}
 --- !u!23 &755489923
@@ -7255,6 +7375,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 22
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 365502546}
 --- !u!23 &766443898
@@ -7323,7 +7444,7 @@ Transform:
   m_GameObject: {fileID: 766443896}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7371445, y: -0, z: -0, w: 0.6757352}
-  m_LocalPosition: {x: 8.642, y: 12.22, z: 20.52}
+  m_LocalPosition: {x: 8.642, y: 12.26, z: 20.52}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7384,6 +7505,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 23
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 21059997}
 --- !u!23 &769517606
@@ -7513,6 +7635,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 24
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1186400536}
 --- !u!23 &772081161
@@ -7581,7 +7704,7 @@ Transform:
   m_GameObject: {fileID: 772081159}
   serializedVersion: 2
   m_LocalRotation: {x: -0.70442516, y: 0.035654396, z: 0.036066376, w: 0.7079642}
-  m_LocalPosition: {x: 5.648, y: 11.026, z: 25.037}
+  m_LocalPosition: {x: 5.648, y: 11.069, z: 25.302}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7684,6 +7807,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 25
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1788374857}
 --- !u!23 &784635753
@@ -7955,6 +8079,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 26
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1407085012}
   - {fileID: 980918270}
@@ -8024,7 +8149,7 @@ Transform:
   m_GameObject: {fileID: 842744605}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7371445, y: -0, z: -0, w: 0.6757352}
-  m_LocalPosition: {x: 8.47, y: 12.102, z: 15.508}
+  m_LocalPosition: {x: 8.47, y: 12.148, z: 15.508}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8193,6 +8318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 27
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1644035950}
   - {fileID: 766443897}
@@ -8262,7 +8388,7 @@ Transform:
   m_GameObject: {fileID: 856785471}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7371445, y: -0, z: -0, w: 0.6757352}
-  m_LocalPosition: {x: 9.456, y: 12.462, z: 19.072}
+  m_LocalPosition: {x: 9.456, y: 12.527, z: 19.072}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8388,6 +8514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 28
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 0}
   - {fileID: 0}
@@ -8572,6 +8699,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 29
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 772081160}
   - {fileID: 2029126940}
@@ -8641,7 +8769,7 @@ Transform:
   m_GameObject: {fileID: 872240606}
   serializedVersion: 2
   m_LocalRotation: {x: -0.70442516, y: 0.035654396, z: 0.036066376, w: 0.7079642}
-  m_LocalPosition: {x: 5.415, y: 11.029, z: 24.405}
+  m_LocalPosition: {x: 5.402, y: 11.08, z: 24.528}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8763,6 +8891,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 30
+  harusLompatKeSini: 1
   nextNodes:
   - {fileID: 1892152295}
 --- !u!23 &873918568
@@ -8831,7 +8960,7 @@ Transform:
   m_GameObject: {fileID: 873918566}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7371445, y: -0, z: -0, w: 0.6757352}
-  m_LocalPosition: {x: 2.73, y: 9.972, z: 17.719}
+  m_LocalPosition: {x: 5.213, y: 10.673, z: 19.649}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8919,6 +9048,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 6
   nodeIndex: 31
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 872240607}
 --- !u!23 &879855103
@@ -8987,7 +9117,7 @@ Transform:
   m_GameObject: {fileID: 879855101}
   serializedVersion: 2
   m_LocalRotation: {x: -0.59818524, y: -0.09619819, z: 0.1361559, w: 0.7838252}
-  m_LocalPosition: {x: 6.084, y: 11.283, z: 23.732}
+  m_LocalPosition: {x: 6.084, y: 11.352, z: 23.732}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9102,6 +9232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 32
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1644035950}
 --- !u!23 &889129291
@@ -9170,7 +9301,7 @@ Transform:
   m_GameObject: {fileID: 889129289}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7371445, y: -0, z: -0, w: 0.6757352}
-  m_LocalPosition: {x: 11.804, y: 12.637, z: 19.805}
+  m_LocalPosition: {x: 11.804, y: 12.699, z: 19.805}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9246,6 +9377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 33
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 0}
   - {fileID: 0}
@@ -9511,6 +9643,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 34
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 0}
   - {fileID: 0}
@@ -9707,6 +9840,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 0
   nodeIndex: 35
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1277124751}
 --- !u!23 &945340198
@@ -9917,6 +10051,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 36
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 982177501}
 --- !u!23 &958174253
@@ -10073,6 +10208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 0
   nodeIndex: 37
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1166256167}
 --- !u!23 &964167872
@@ -10229,6 +10365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 38
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1526260651}
 --- !u!23 &967300483
@@ -10297,7 +10434,7 @@ Transform:
   m_GameObject: {fileID: 967300481}
   serializedVersion: 2
   m_LocalRotation: {x: -0.70442516, y: 0.035654396, z: 0.036066376, w: 0.7079642}
-  m_LocalPosition: {x: 5.753, y: 11.078, z: 26.767}
+  m_LocalPosition: {x: 5.73, y: 11.078, z: 26.85}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10493,6 +10630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 39
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1862723493}
 --- !u!23 &980918271
@@ -10561,7 +10699,7 @@ Transform:
   m_GameObject: {fileID: 980918269}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7371445, y: -0, z: -0, w: 0.6757352}
-  m_LocalPosition: {x: 8.47, y: 12.226, z: 16.931}
+  m_LocalPosition: {x: 8.47, y: 12.291, z: 16.931}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10622,6 +10760,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 40
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1973244747}
 --- !u!23 &982177502
@@ -10751,6 +10890,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 4
   nodeIndex: 41
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 221928344}
 --- !u!23 &992158080
@@ -10819,7 +10959,7 @@ Transform:
   m_GameObject: {fileID: 992158078}
   serializedVersion: 2
   m_LocalRotation: {x: -0.70442516, y: 0.035654396, z: 0.036066376, w: 0.7079642}
-  m_LocalPosition: {x: 3.701, y: 11.013, z: 25.678}
+  m_LocalPosition: {x: 3.498, y: 11.013, z: 25.668}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11096,6 +11236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 2
   nodeIndex: 42
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 12551960}
 --- !u!23 &1038733029
@@ -11537,6 +11678,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 43
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 0}
   - {fileID: 0}
@@ -11787,6 +11929,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 44
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 958174252}
 --- !u!23 &1152386321
@@ -11943,6 +12086,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 45
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1474967676}
 --- !u!23 &1161188998
@@ -12099,6 +12243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 46
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1627753224}
 --- !u!23 &1166256168
@@ -12243,6 +12388,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 47
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1824407698}
 --- !u!23 &1184071604
@@ -12384,6 +12530,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 48
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 967300482}
 --- !u!23 &1186400537
@@ -12452,7 +12599,7 @@ Transform:
   m_GameObject: {fileID: 1186400535}
   serializedVersion: 2
   m_LocalRotation: {x: -0.70442516, y: 0.035654396, z: 0.036066376, w: 0.7079642}
-  m_LocalPosition: {x: 5.799, y: 11.052, z: 25.874}
+  m_LocalPosition: {x: 5.799, y: 11.078, z: 26.081}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12648,6 +12795,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 0
   nodeIndex: 49
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1447035807}
 --- !u!23 &1226537658
@@ -12716,7 +12864,7 @@ Transform:
   m_GameObject: {fileID: 1226537656}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7371445, y: -0, z: -0, w: 0.6757352}
-  m_LocalPosition: {x: 6.42, y: 12, z: 16.55}
+  m_LocalPosition: {x: 7.716, y: 12.087, z: 17.719}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12858,6 +13006,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 50
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 879855102}
 --- !u!23 &1248910807
@@ -12926,7 +13075,7 @@ Transform:
   m_GameObject: {fileID: 1248910805}
   serializedVersion: 2
   m_LocalRotation: {x: -0.59818524, y: -0.09619819, z: 0.1361559, w: 0.7838252}
-  m_LocalPosition: {x: 6.796, y: 11.636, z: 22.832}
+  m_LocalPosition: {x: 6.796, y: 11.703, z: 22.832}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13014,6 +13163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 51
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 964167871}
 --- !u!23 &1251301286
@@ -13170,6 +13320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 52
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 38965438}
 --- !u!23 &1277124752
@@ -13299,6 +13450,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 53
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1561800990}
 --- !u!23 &1278898123
@@ -13367,7 +13519,7 @@ Transform:
   m_GameObject: {fileID: 1278898121}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7371445, y: -0, z: -0, w: 0.6757352}
-  m_LocalPosition: {x: 9.525, y: 12.014, z: 14.019}
+  m_LocalPosition: {x: 9.525, y: 12.059999, z: 14.019}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13428,6 +13580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 54
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1248910806}
 --- !u!23 &1279516580
@@ -13496,7 +13649,7 @@ Transform:
   m_GameObject: {fileID: 1279516578}
   serializedVersion: 2
   m_LocalRotation: {x: -0.59818524, y: -0.09619819, z: 0.1361559, w: 0.7838252}
-  m_LocalPosition: {x: 7.301, y: 11.879, z: 22.283}
+  m_LocalPosition: {x: 7.301, y: 11.926, z: 22.283}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13584,6 +13737,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 55
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1786298952}
   - {fileID: 243750058}
@@ -13923,6 +14077,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 56
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 869270352}
 --- !u!23 &1288771715
@@ -14584,6 +14739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 5
   nodeIndex: 57
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 188769684}
 --- !u!23 &1403230362
@@ -14652,7 +14808,7 @@ Transform:
   m_GameObject: {fileID: 1403230360}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7371445, y: -0, z: -0, w: 0.6757352}
-  m_LocalPosition: {x: 13.926, y: 12.673, z: 18.704}
+  m_LocalPosition: {x: 13.926, y: 12.724, z: 18.704}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14713,6 +14869,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 58
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1278898122}
 --- !u!23 &1407085013
@@ -14781,7 +14938,7 @@ Transform:
   m_GameObject: {fileID: 1407085011}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7371445, y: -0, z: -0, w: 0.6757352}
-  m_LocalPosition: {x: 8.759, y: 12.039, z: 14.787}
+  m_LocalPosition: {x: 8.865, y: 12.084999, z: 14.602}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14901,6 +15058,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 59
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1403230361}
 --- !u!23 &1437433192
@@ -14969,7 +15127,7 @@ Transform:
   m_GameObject: {fileID: 1437433190}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7371445, y: -0, z: -0, w: 0.6757352}
-  m_LocalPosition: {x: 14.496, y: 12.61, z: 17.914}
+  m_LocalPosition: {x: 14.496, y: 12.676, z: 17.914}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15057,6 +15215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 60
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 842744606}
 --- !u!23 &1447035808
@@ -15125,7 +15284,7 @@ Transform:
   m_GameObject: {fileID: 1447035806}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7371445, y: -0, z: -0, w: 0.6757352}
-  m_LocalPosition: {x: 7.16, y: 11.77, z: 14.81}
+  m_LocalPosition: {x: 7.16, y: 11.886, z: 15.803}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15251,6 +15410,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 61
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1863796211}
   - {fileID: 23107387}
@@ -15436,6 +15596,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 0
   nodeIndex: 62
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 343843324}
 --- !u!4 &1490486553
@@ -15694,6 +15855,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 63
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 992158079}
 --- !u!23 &1526151527
@@ -15823,6 +15985,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 64
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 221928344}
 --- !u!23 &1526260652
@@ -15891,7 +16054,7 @@ Transform:
   m_GameObject: {fileID: 1526260650}
   serializedVersion: 2
   m_LocalRotation: {x: -0.70442516, y: 0.035654396, z: 0.036066376, w: 0.7079642}
-  m_LocalPosition: {x: 4.762, y: 11.059, z: 26.868}
+  m_LocalPosition: {x: 4.762, y: 11.059, z: 27.119}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15952,6 +16115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 65
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 0}
   - {fileID: 0}
@@ -16136,6 +16300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 5
   nodeIndex: 66
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1152386320}
 --- !u!23 &1537739218
@@ -16204,7 +16369,7 @@ Transform:
   m_GameObject: {fileID: 1537739216}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7371445, y: -0, z: -0, w: 0.6757352}
-  m_LocalPosition: {x: -1.7749999, y: 10.78, z: 20.251}
+  m_LocalPosition: {x: -1.7749999, y: 10.808, z: 20.251}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16335,6 +16500,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 67
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1625308290}
 --- !u!23 &1561800991
@@ -16403,7 +16569,7 @@ Transform:
   m_GameObject: {fileID: 1561800989}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7371445, y: -0, z: -0, w: 0.6757352}
-  m_LocalPosition: {x: 10.728, y: 12.004, z: 13.201}
+  m_LocalPosition: {x: 10.728, y: 12.068, z: 13.201}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16464,6 +16630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 68
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1779143819}
 --- !u!23 &1562870359
@@ -16755,6 +16922,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 69
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 480056797}
 --- !u!23 &1581470373
@@ -16823,7 +16991,7 @@ Transform:
   m_GameObject: {fileID: 1581470371}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -6.168, y: 9.461, z: 5.792}
+  m_LocalPosition: {x: -6.7340007, y: 9.461, z: 5.792}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16938,6 +17106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 70
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 288362912}
 --- !u!23 &1587031163
@@ -17006,7 +17175,7 @@ Transform:
   m_GameObject: {fileID: 1587031161}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7371445, y: -0, z: -0, w: 0.6757352}
-  m_LocalPosition: {x: 13.351, y: 12.168, z: 13.513}
+  m_LocalPosition: {x: 13.351, y: 12.230999, z: 13.513}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17094,6 +17263,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 71
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 126197827}
 --- !u!23 &1604315662
@@ -17250,6 +17420,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 2
   nodeIndex: 72
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1587031162}
 --- !u!23 &1625308291
@@ -17318,7 +17489,7 @@ Transform:
   m_GameObject: {fileID: 1625308289}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7371445, y: -0, z: -0, w: 0.6757352}
-  m_LocalPosition: {x: 12.027, y: 12.071, z: 13.195}
+  m_LocalPosition: {x: 12.027, y: 12.135, z: 13.195}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17379,6 +17550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 73
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1038733028}
 --- !u!23 &1627753225
@@ -17562,6 +17734,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 74
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 856785472}
 --- !u!23 &1644035951
@@ -17630,7 +17803,7 @@ Transform:
   m_GameObject: {fileID: 1644035949}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7371445, y: -0, z: -0, w: 0.6757352}
-  m_LocalPosition: {x: 10.51, y: 12.558, z: 19.531}
+  m_LocalPosition: {x: 10.51, y: 12.62, z: 19.531}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18509,6 +18682,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 2
   nodeIndex: 75
+  harusLompatKeSini: 1
   nextNodes:
   - {fileID: 1226537657}
 --- !u!23 &1772815035
@@ -18576,13 +18750,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1772815033}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0.144, y: 10.506, z: 11.64}
+  m_LocalRotation: {x: -0.7059895, y: -0.03973527, z: 0.039735246, w: 0.7059895}
+  m_LocalPosition: {x: 6.553, y: 12.422, z: 14.172}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 530655290}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -83.557, y: -90, z: 90}
 --- !u!65 &1772815038
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18665,6 +18839,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 76
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 2085237959}
 --- !u!23 &1779143820
@@ -18794,6 +18969,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 77
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1863796211}
 --- !u!23 &1786298953
@@ -18918,7 +19094,7 @@ Transform:
   m_GameObject: {fileID: 1788374855}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7371445, y: -0, z: -0, w: 0.6757352}
-  m_LocalPosition: {x: -2.763, y: 10.702, z: 19.605}
+  m_LocalPosition: {x: -3.351, y: 10.702, z: 19.605}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18938,9 +19114,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 78
+  harusLompatKeSini: 0
   nextNodes:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1852017781}
 --- !u!23 &1788374858
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19122,6 +19298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 79
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 0}
   - {fileID: 0}
@@ -19345,6 +19522,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 80
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 0}
   - {fileID: 0}
@@ -19524,7 +19702,7 @@ Transform:
   m_GameObject: {fileID: 1852017779}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7371445, y: -0, z: -0, w: 0.6757352}
-  m_LocalPosition: {x: -2.763, y: 10.702001, z: 19.605001}
+  m_LocalPosition: {x: -2.646, y: 10.821, z: 20.4}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19544,6 +19722,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 81
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1537739217}
 --- !u!23 &1852017782
@@ -19766,6 +19945,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 2
   nodeIndex: 82
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 856785472}
 --- !u!23 &1862723494
@@ -19834,7 +20014,7 @@ Transform:
   m_GameObject: {fileID: 1862723492}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7371445, y: -0, z: -0, w: 0.6757352}
-  m_LocalPosition: {x: 8.728, y: 12.349, z: 18.162}
+  m_LocalPosition: {x: 8.728, y: 12.4140005, z: 18.162}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19895,6 +20075,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 83
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 0}
   - {fileID: 0}
@@ -20326,6 +20507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 84
+  harusLompatKeSini: 1
   nextNodes:
   - {fileID: 1226537657}
 --- !u!23 &1892152296
@@ -20394,7 +20576,7 @@ Transform:
   m_GameObject: {fileID: 1892152294}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7371445, y: -0, z: -0, w: 0.6757352}
-  m_LocalPosition: {x: 4.86, y: 10.94, z: 18.38}
+  m_LocalPosition: {x: 5.775, y: 11.996, z: 18.643}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20590,6 +20772,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 0
   nodeIndex: 85
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1949907538}
 --- !u!23 &1910876845
@@ -21027,6 +21210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 86
+  harusLompatKeSini: 1
   nextNodes:
   - {fileID: 1161188997}
 --- !u!23 &1949907539
@@ -21095,7 +21279,7 @@ Transform:
   m_GameObject: {fileID: 1949907537}
   serializedVersion: 2
   m_LocalRotation: {x: -0.77042437, y: -0, z: -0, w: 0.6375314}
-  m_LocalPosition: {x: -1.5519999, y: 10.515, z: 8.535}
+  m_LocalPosition: {x: -1.5519999, y: 10.491, z: 8.182}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21291,6 +21475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 87
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 133126097}
 --- !u!23 &1973244748
@@ -21359,7 +21544,7 @@ Transform:
   m_GameObject: {fileID: 1973244746}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7371445, y: -0, z: -0, w: 0.6757352}
-  m_LocalPosition: {x: 1.822, y: 9.97, z: 19.08}
+  m_LocalPosition: {x: 2.867, y: 9.97, z: 17.735}
   m_LocalScale: {x: 159.39352, y: 159.39352, z: 159.39352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21447,6 +21632,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 88
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1910876844}
 --- !u!23 &2001366286
@@ -21630,6 +21816,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 3
   nodeIndex: 89
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 1283201410}
 --- !u!23 &2028617405
@@ -21759,6 +21946,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 90
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 659231879}
 --- !u!23 &2029126941
@@ -21996,6 +22184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoardNode
   tipePetak: 1
   nodeIndex: 91
+  harusLompatKeSini: 0
   nextNodes:
   - {fileID: 945340197}
 --- !u!23 &2085237960
@@ -22512,15 +22701,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3535596648099303608, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.111
+      value: -9.22
       objectReference: {fileID: 0}
     - target: {fileID: 3535596648099303608, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 21.404
+      value: 23.56
       objectReference: {fileID: 0}
     - target: {fileID: 3535596648099303608, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -24.8
+      value: 3.53
       objectReference: {fileID: 0}
     - target: {fileID: 3535596648099303608, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -22937,7 +23126,7 @@ PrefabInstance:
     - target: {fileID: 7043468932914042518, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
       propertyPath: currentNode
       value: 
-      objectReference: {fileID: 1490486552}
+      objectReference: {fileID: 1161188997}
     - target: {fileID: 7057425315538010791, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -23164,7 +23353,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3535596648099303608, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 202524909}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd36a49965a6f0a44a2e32babd5a3ff8, type: 3}
 --- !u!1660057539 &9223372036854775807
@@ -23184,6 +23376,5 @@ SceneRoots:
   - {fileID: 508122717}
   - {fileID: 105602623}
   - {fileID: 8303291}
-  - {fileID: 290471189}
   - {fileID: 694455059}
   - {fileID: 1694538385}
