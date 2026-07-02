@@ -1,64 +1,87 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class TarikTambangManager : MonoBehaviour
 {
-    [Header("Objek Terpisah")]
+    [Header("Objek")]
     public Transform tali;
     public Animator animPemainKiri;
     public Animator animPemainKanan;
 
-    [Header("Pengaturan Permainan")]
+    [Header("Gameplay")]
     public float kekuatanTarik = 0.5f;
     public float batasMenang = 5f;
 
-    [Header("Pindah Scene")]
-    [Tooltip("Nama scene papan permainan monopoli Anda")]
+    [Header("Scene")]
     public string namaSceneUtama = "MapUtama";
-    [Tooltip("Jeda waktu sebelum pindah (agar pemain sempat melihat animasi jatuh)")]
-    public float jedaPindahScene = 1.5f;
+    public float jedaPindahScene = 2f;
 
-    [Header("Arah Tarikan (World Space)")]
+    [Header("Arah Tarik")]
     public Vector3 arahKiri = Vector3.back;
     public Vector3 arahKanan = Vector3.forward;
 
-    // Nama parameter di Animator
-    private string triggerTarikKeras = "TarikKeras";
-    private string stateKalah = "Kalah"; 
+    [Header("Mash Detection")]
+    public float hardPullInterval = 0.25f;
 
     private Vector3 posisiAwalTali;
     private bool gameSelesai = false;
 
+    private float lastLeftPress;
+    private float lastRightPress;
+
+    // Parameter Animator
+    private const string START_PULL = "StartPull";
+    private const string HARD_PULL = "HardPull";
+    private const string LOSE = "Lose";
+
     void Start()
     {
-        if (tali != null)
-        {
-            posisiAwalTali = tali.position;
-        }
+        posisiAwalTali = tali.position;
+
+        // Masuk ke animasi tarik (loop)
+        animPemainKiri.SetTrigger(START_PULL);
+        animPemainKanan.SetTrigger(START_PULL);
     }
 
     void Update()
     {
-        if (gameSelesai || tali == null) return;
+        if (gameSelesai) return;
 
-        // --- PEMAIN KIRI (Tombol A) ---
+        //------------------------
+        // Pemain Kiri (A)
+        //------------------------
         if (Input.GetKeyDown(KeyCode.A))
         {
             tali.position += arahKiri * kekuatanTarik;
 
-            if (animPemainKiri != null)
-                animPemainKiri.SetTrigger(triggerTarikKeras);
+            float interval = Time.time - lastLeftPress;
+
+            if (interval < hardPullInterval)
+            {
+                animPemainKiri.SetTrigger(HARD_PULL);
+            }
+
+            lastLeftPress = Time.time;
 
             CekMenang();
         }
 
-        // --- PEMAIN KANAN (Tombol L) ---
+        //------------------------
+        // Pemain Kanan (L)
+        //------------------------
         if (Input.GetKeyDown(KeyCode.L))
         {
             tali.position += arahKanan * kekuatanTarik;
 
-            if (animPemainKanan != null)
-                animPemainKanan.SetTrigger(triggerTarikKeras);
+            float interval = Time.time - lastRightPress;
+
+            if (interval < hardPullInterval)
+            {
+                animPemainKanan.SetTrigger(HARD_PULL);
+            }
+
+            lastRightPress = Time.time;
 
             CekMenang();
         }
@@ -66,47 +89,36 @@ public class TarikTambangManager : MonoBehaviour
 
     void CekMenang()
     {
-        float jarakDariTengah = Vector3.Distance(posisiAwalTali, tali.position);
+        Vector3 offset = tali.position - posisiAwalTali;
 
-        if (jarakDariTengah >= batasMenang)
+        float arah =
+            Vector3.Dot(offset.normalized, arahKiri.normalized);
+
+        if (offset.magnitude < batasMenang)
+            return;
+
+        gameSelesai = true;
+
+        if (arah > 0)
         {
-            gameSelesai = true;
+            Debug.Log("PEMAIN KIRI MENANG");
 
-            float jarakKeKiri = Vector3.Distance(tali.position, posisiAwalTali + (arahKiri * batasMenang));
-            float jarakKeKanan = Vector3.Distance(tali.position, posisiAwalTali + (arahKanan * batasMenang));
-
-            if (jarakKeKiri < jarakKeKanan)
-            {
-                Debug.Log("PEMAIN KIRI MENANG!");
-                // Pemain Kanan jatuh
-                if (animPemainKanan != null)
-                    animPemainKanan.CrossFade(stateKalah, 0.2f);
-            }
-            else
-            {
-                Debug.Log("PEMAIN KANAN MENANG!");
-                // Pemain Kiri jatuh
-                if (animPemainKiri != null)
-                    animPemainKiri.CrossFade(stateKalah, 0.2f);
-            }
-
-            // Langsung bersiap kembali ke scene utama
-            StartCoroutine(ProsesKembaliKeUtama());
-        }
-    }
-
-    private System.Collections.IEnumerator ProsesKembaliKeUtama()
-    {
-        // Beri sedikit jeda agar pemain bisa melihat siapa yang jatuh
-        yield return new WaitForSeconds(jedaPindahScene);
-
-        if (!string.IsNullOrEmpty(namaSceneUtama))
-        {
-            SceneManager.LoadScene(namaSceneUtama);
+            animPemainKanan.SetTrigger(LOSE);
         }
         else
         {
-            Debug.LogError("Gagal pindah scene: 'namaSceneUtama' di Inspector belum diisi!");
+            Debug.Log("PEMAIN KANAN MENANG");
+
+            animPemainKiri.SetTrigger(LOSE);
         }
+
+        StartCoroutine(KembaliKeSceneUtama());
+    }
+
+    IEnumerator KembaliKeSceneUtama()
+    {
+        yield return new WaitForSeconds(jedaPindahScene);
+
+        SceneManager.LoadScene(namaSceneUtama);
     }
 }
