@@ -6,6 +6,8 @@ public class GameDataManager : MonoBehaviour
 
     public int[] savedPlayerNodeIndices;
     public int[] savedPlayerScores; // Array untuk menyimpan skor/poin pemain jika ada
+    public int[] savedPlayerTapes; // Array untuk menyimpan tape pemain
+    public int[] savedPlayerDauns; // Array untuk menyimpan daun pemain
     public int savedCurrentPlayerIndex; // Mencatat giliran pemain terakhir
     public bool hasSavedData = false; // Tanda penanda apakah ada data yang tersimpan
 
