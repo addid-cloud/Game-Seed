@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Pengaturan Kamera")]
     public CinemachineCamera vcamOverview; 
+    [Tooltip("Kamera utama yang akan bergantian menyorot pemain aktif")]
     public CinemachineCamera vcamPlayer;   
     public CinemachineCamera vcamDice; 
 
@@ -46,11 +47,13 @@ public class GameManager : MonoBehaviour
         }
 
         // Set target kamera ke pemain saat ini (bisa pemain 1, atau pemain yang tersimpan)
-        vcamPlayer.Target.TrackingTarget = ActivePlayer.transform;
+        if (vcamPlayer != null)
+        {
+            vcamPlayer.Target.TrackingTarget = ActivePlayer.transform;
+            // Karakter menghadap kamera dan menyapa
+            ActivePlayer.SambutGiliran(vcamPlayer.transform);
+        }
         Debug.Log($">>> Giliran Player {currentPlayerIndex + 1}. Tekan SPASI untuk fokus ke dadu.");
-        
-        // Karakter menghadap kamera dan menyapa
-        ActivePlayer.SambutGiliran(vcamPlayer.transform.position);
     }
 
     void Update()
@@ -66,7 +69,7 @@ public class GameManager : MonoBehaviour
         {
             // Jika Overview aktif, paksa kamera atas mengambil alih
             vcamOverview.Priority = 30;
-            vcamPlayer.Priority = 10;
+            if (vcamPlayer != null) vcamPlayer.Priority = 10;
             vcamDice.Priority = 10;
         }
         else
@@ -76,13 +79,13 @@ public class GameManager : MonoBehaviour
             {
                 // Sorot dadu
                 vcamDice.Priority = 30;
-                vcamPlayer.Priority = 10;
+                if (vcamPlayer != null) vcamPlayer.Priority = 10;
                 vcamOverview.Priority = 10;
             }
             else // Fase WaitingForFocus atau Moving
             {
                 // Sorot pemain
-                vcamPlayer.Priority = 30;
+                if (vcamPlayer != null) vcamPlayer.Priority = 30;
                 vcamDice.Priority = 10;
                 vcamOverview.Priority = 10;
             }
@@ -145,14 +148,15 @@ public class GameManager : MonoBehaviour
         else
         {
             // Otomatis pindah target kamera ke pemain berikutnya. 
-            // Cinemachine akan memicu transisi melayang (pan) secara halus!
-            vcamPlayer.Target.TrackingTarget = ActivePlayer.transform;
+            if (vcamPlayer != null)
+            {
+                vcamPlayer.Target.TrackingTarget = ActivePlayer.transform;
+                // Karakter selanjutnya menghadap kamera dan menyapa
+                ActivePlayer.SambutGiliran(vcamPlayer.transform);
+            }
 
             Debug.Log($">>> Giliran Player {currentPlayerIndex + 1}. Tekan SPASI untuk fokus ke dadu.");
             physicalDice.floatingText.text = "";
-            
-            // Karakter selanjutnya menghadap kamera dan menyapa
-            ActivePlayer.SambutGiliran(vcamPlayer.transform.position);
 
             // Reset fase
             currentPhase = TurnPhase.WaitingForFocus;
@@ -181,9 +185,12 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogWarning("Belum ada nama Mini Game yang ditambahkan di List namaMiniGames!");
             // Fallback: Kembalikan giliran ke player 1 jika mini-game kosong
-            vcamPlayer.Target.TrackingTarget = ActivePlayer.transform;
+            if (vcamPlayer != null)
+            {
+                vcamPlayer.Target.TrackingTarget = ActivePlayer.transform;
+                ActivePlayer.SambutGiliran(vcamPlayer.transform);
+            }
             physicalDice.floatingText.text = "";
-            ActivePlayer.SambutGiliran(vcamPlayer.transform.position);
             currentPhase = TurnPhase.WaitingForFocus;
         }
     }

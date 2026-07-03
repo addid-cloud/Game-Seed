@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Pengaturan Animasi Gerak")]
     public float yOffset = 0.5f;
     public float rotationSpeed = 10f; // Kecepatan putar menghadap tujuan
+    [Tooltip("Isi 180 jika karakter berlari menghadap belakang (tergantung bawaan model 3D)")]
+    public float rotationOffsetY = 0f;
     
     [Header("Referensi Visual")]
     public PlayerVisualController visualController; // Referensi untuk memicu animasi
@@ -61,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
             direction.y = 0; // Kunci sumbu Y agar tidak mendongak/menunduk
             if (direction != Vector3.zero)
             {
-                Quaternion targetRot = Quaternion.LookRotation(direction);
+                Quaternion targetRot = Quaternion.LookRotation(direction) * Quaternion.Euler(0, rotationOffsetY, 0);
                 while (Quaternion.Angle(transform.rotation, targetRot) > 1f)
                 {
                     transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * rotationSpeed);
@@ -196,29 +198,34 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Fungsi untuk menyambut giliran (menghadap kamera dan memainkan animasi)
-    public void SambutGiliran(Vector3 posisiKamera)
+    public void SambutGiliran(Transform kamera)
     {
-        StartCoroutine(ProsesMenolehKamera(posisiKamera));
+        StartCoroutine(ProsesMenolehKamera(kamera));
     }
 
-    private IEnumerator ProsesMenolehKamera(Vector3 posisiKamera)
+    private IEnumerator ProsesMenolehKamera(Transform kamera)
     {
-        // 1. Hitung arah menghadap kamera dengan mengabaikan sumbu Y (ketinggian)
-        Vector3 direction = (posisiKamera - transform.position).normalized;
-        direction.y = 0f; 
-        
-        if (direction != Vector3.zero)
+        float timeElapsed = 0f;
+        float duration = 1.5f; // Durasi tracking, pas dengan waktu terbang Cinemachine
+
+        // 1. Secara dinamis terus menatap kamera yang sedang melayang
+        while (timeElapsed < duration)
         {
-            Quaternion targetRot = Quaternion.LookRotation(direction);
+            timeElapsed += Time.deltaTime;
             
-            // Putar badan secara halus sampai menghadap kamera
-            while (Quaternion.Angle(transform.rotation, targetRot) > 1f)
+            if (kamera != null)
             {
-                // Menggunakan kecepatan rotasi yang lebih lambat agar terlihat elegan
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * (rotationSpeed * 0.5f));
-                yield return null;
+                Vector3 direction = (kamera.position - transform.position).normalized;
+                direction.y = 0f; 
+                
+                if (direction != Vector3.zero)
+                {
+                    Quaternion targetRot = Quaternion.LookRotation(direction) * Quaternion.Euler(0, rotationOffsetY, 0);
+                    // Putar badan secara halus secara real-time
+                    transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * rotationSpeed);
+                }
             }
-            transform.rotation = targetRot;
+            yield return null;
         }
 
         // 2. Mainkan animasi selebrasi / giliran setelah posisi pas
