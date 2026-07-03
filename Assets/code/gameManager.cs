@@ -12,7 +12,13 @@ public class GameManager : MonoBehaviour
     // Fase giliran sekarang lebih ringkas (tanpa DiceFinished)
     private enum TurnPhase { WaitingForFocus, ReadyToRoll, Rolling, Moving }
     private TurnPhase currentPhase = TurnPhase.WaitingForFocus;
+[Header("Buy Tape UI")]
+public GameObject buyTapePanel;
 
+public int tapePrice = 20;
+
+private PlayerData currentBuyer;
+private bool waitingForChoice = false;
     [Header("Pengaturan Waktu")]
     [SerializeField] private float waitBeforeMoving = 1.5f;
 
@@ -75,6 +81,7 @@ public class GameManager : MonoBehaviour
             // Karakter menghadap kamera dan menyapa
             ActivePlayer.SambutGiliran(vcamPlayer.transform);
         }
+        if(buyTapePanel != null) buyTapePanel.SetActive(false);
         Debug.Log($">>> Giliran Player {currentPlayerIndex + 1}. Tekan SPASI untuk fokus ke dadu.");
     }
 
@@ -132,7 +139,96 @@ public class GameManager : MonoBehaviour
         if (Keyboard.current.digit1Key.wasPressedThisFrame && ActivePlayer.isWaitingForBranch) PilihCabang(0);
         if (Keyboard.current.digit2Key.wasPressedThisFrame && ActivePlayer.isWaitingForBranch) PilihCabang(1);
     }
+public void ApplySpaceEffect(PlayerMovement player)
+{
+    if (player.currentNode == null) return;
 
+    PlayerData data = player.GetComponent<PlayerData>();
+    BoardNode node = player.currentNode;
+
+    switch (node.tipePetak)
+    {
+        // ==========================
+        // MEMORY SPACE (+ Daun)
+        // ==========================
+        case BoardNode.SpaceType.MemorySpace:
+            data.daun += 10;
+            Debug.Log($"{player.name} mendapatkan 10 Daun!");
+            break;
+
+        // ==========================
+        // STATIC SPACE (Kosong)
+        // ==========================
+        case BoardNode.SpaceType.StaticSpace:
+            Debug.Log($"{player.name} berada di Static Space.");
+            break;
+
+        // ==========================
+        // LOSS SPACE (- Daun)
+        // ==========================
+        case BoardNode.SpaceType.LossSpace:
+            data.daun = Mathf.Max(0, data.daun - 10);
+            Debug.Log($"{player.name} kehilangan 10 Daun!");
+            break;
+
+        // ==========================
+        // FRIENDSHIP SPACE
+        // Beli Tape
+        // ==========================
+      case BoardNode.SpaceType.FriendshipSpace:
+
+    currentBuyer = data;
+
+    waitingForChoice = true;
+
+    buyTapePanel.SetActive(true);
+
+    Debug.Log("Menunggu pemain membeli tape...");
+
+    break;
+
+        // ==========================
+        // TAPE SPACE
+        // Gratis Tape
+        // ==========================
+        case BoardNode.SpaceType.TapeSpace:
+            data.tape++;
+            Debug.Log($"{player.name} mendapatkan 1 Tape!");
+            break;
+
+        // ==========================
+        // NOSTALGIA SPACE
+        // Bonus Daun
+        // ==========================
+        case BoardNode.SpaceType.NostalgiaSpace:
+            data.daun += 30;
+            Debug.Log($"{player.name} mendapatkan bonus 30 Daun!");
+            break;
+
+        // ==========================
+        // GLITCH SPACE
+        // Kehilangan Daun
+        // ==========================
+        case BoardNode.SpaceType.GlitchSpace:
+            data.daun = Mathf.Max(0, data.daun - 20);
+            Debug.Log($"{player.name} terkena Glitch! Kehilangan 20 Daun.");
+            break;
+
+        // ==========================
+        // DREAM TRAP
+        // ==========================
+        case BoardNode.SpaceType.DreamTrap:
+            Debug.Log($"{player.name} masuk Dream Trap!");
+            // Nanti bisa ditambah event khusus
+            break;
+    }
+
+    Debug.Log("==================================");
+    Debug.Log($"Player : {player.name}");
+    Debug.Log($"Daun   : {data.daun}");
+    Debug.Log($"Tape   : {data.tape}");
+    Debug.Log("==================================");
+}
     // --- FUNGSI UNTUK DIPANGGIL OLEH TOMBOL UI CABANG ---
     public void TampilkanUICabang()
     {
@@ -184,8 +280,12 @@ public class GameManager : MonoBehaviour
         Debug.Log($"=== Player {currentPlayerIndex + 1} Mengambil Langkah: {diceResult} ===");
 
         // Tunggu sampai karakter selesai berjalan di papan
-        yield return StartCoroutine(ActivePlayer.MoveSteps(diceResult));
-        
+yield return StartCoroutine(ActivePlayer.MoveSteps(diceResult));
+
+ApplySpaceEffect(ActivePlayer);
+
+// Kalau sedang memilih beli tape, tunggu dulu
+yield return new WaitUntil(() => waitingForChoice == false);
         // --- GANTI GILIRAN & EFEK RIVAL PAN ---
         currentPlayerIndex++; 
         if (currentPlayerIndex >= players.Length) currentPlayerIndex = 0; 
@@ -284,7 +384,40 @@ public class GameManager : MonoBehaviour
         GameDataManager.Instance.hasSavedData = true;
         Debug.Log("Game Data Tersimpan di GameDataManager!");
     }
+public void BuyTapeYes()
+{
+    if(currentBuyer == null)
+        return;
 
+    if(currentBuyer.daun >= tapePrice)
+    {
+        currentBuyer.daun -= tapePrice;
+        currentBuyer.tape++;
+
+        Debug.Log("Tape berhasil dibeli!");
+    }
+    else
+    {
+        Debug.Log("Daun tidak cukup!");
+    }
+
+    buyTapePanel.SetActive(false);
+
+    currentBuyer = null;
+
+    waitingForChoice = false;
+}
+
+public void BuyTapeNo()
+{
+    buyTapePanel.SetActive(false);
+
+    currentBuyer = null;
+
+    waitingForChoice = false;
+
+    Debug.Log("Pemain tidak membeli tape.");
+}
     public void LoadGameData()
     {
         if (GameDataManager.Instance == null || !GameDataManager.Instance.hasSavedData) return;
