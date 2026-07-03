@@ -40,6 +40,15 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        // Pastikan setiap player memiliki komponen PlayerData
+        foreach (var player in players)
+        {
+            if (player != null && player.GetComponent<PlayerData>() == null)
+            {
+                player.gameObject.AddComponent<PlayerData>();
+            }
+        }
+
         // Jika ada data tersimpan (kembali dari Mini-Game), muat data tersebut
         if (GameDataManager.Instance != null && GameDataManager.Instance.hasSavedData)
         {
@@ -201,6 +210,8 @@ public class GameManager : MonoBehaviour
         
         GameDataManager.Instance.savedPlayerNodeIndices = new int[players.Length];
         GameDataManager.Instance.savedPlayerScores = new int[players.Length];
+        GameDataManager.Instance.savedPlayerTapes = new int[players.Length];
+        GameDataManager.Instance.savedPlayerDauns = new int[players.Length];
         
         for (int i = 0; i < players.Length; i++)
         {
@@ -219,6 +230,13 @@ public class GameManager : MonoBehaviour
             }
             GameDataManager.Instance.savedPlayerNodeIndices[i] = nodeIndex;
             GameDataManager.Instance.savedPlayerScores[i] = 0; // Sementara diset 0
+            
+            PlayerData pd = players[i].GetComponent<PlayerData>();
+            if (pd != null)
+            {
+                GameDataManager.Instance.savedPlayerTapes[i] = pd.tape;
+                GameDataManager.Instance.savedPlayerDauns[i] = pd.daun;
+            }
         }
         
         GameDataManager.Instance.savedCurrentPlayerIndex = currentPlayerIndex;
@@ -249,6 +267,19 @@ public class GameManager : MonoBehaviour
                     startPos.y += players[i].yOffset;
                 }
                 players[i].transform.position = startPos;
+            }
+            
+            PlayerData pd = players[i].GetComponent<PlayerData>();
+            if (pd != null)
+            {
+                if (GameDataManager.Instance.savedPlayerTapes != null && i < GameDataManager.Instance.savedPlayerTapes.Length)
+                {
+                    pd.tape = GameDataManager.Instance.savedPlayerTapes[i];
+                }
+                if (GameDataManager.Instance.savedPlayerDauns != null && i < GameDataManager.Instance.savedPlayerDauns.Length)
+                {
+                    pd.daun = GameDataManager.Instance.savedPlayerDauns[i];
+                }
             }
         }
         
