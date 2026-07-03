@@ -19,6 +19,10 @@ public int tapePrice = 20;
 
 private PlayerData currentBuyer;
 private bool waitingForChoice = false;
+
+    [Header("UI Kemenangan")]
+    public GameObject winPanel;
+    public TMPro.TMP_Text winText;
     [Header("Pengaturan Waktu")]
     [SerializeField] private float waitBeforeMoving = 1.5f;
 
@@ -58,6 +62,9 @@ private bool waitingForChoice = false;
     {
         // Pastikan UI cabang dimatikan di awal permainan
         if (panelCabang != null) panelCabang.SetActive(false);
+
+        // Pastikan UI kemenangan dimatikan di awal permainan
+        if (winPanel != null) winPanel.SetActive(false);
 
         // Pastikan setiap player memiliki komponen PlayerData
         foreach (var player in players)
@@ -486,4 +493,29 @@ public void BuyTapeNo()
         Debug.Log($"Berhasil mengisi indeks dan mendaftarkan {allNodes.Length} petak secara otomatis!");
     }
 #endif
+
+    // --- FUNGSI KEMENANGAN ---
+    public void TriggerWin(PlayerData winner)
+    {
+        if (winPanel != null) winPanel.SetActive(true);
+        
+        if (winText != null)
+        {
+            winText.text = winner.gameObject.name + " MENANG!\n(Berhasil Mengumpulkan 3 Tape Emas)";
+        }
+        
+        Debug.Log(">>> " + winner.gameObject.name + " MENANG! <<<");
+    }
+
+    public void BackToMainMenu()
+    {
+        // Reset data permainan agar bersih jika main lagi
+        if (GameDataManager.Instance != null)
+        {
+            GameDataManager.Instance.hasSavedData = false;
+        }
+        
+        // Asumsi nama scene menu utama adalah "startMenu" (berdasarkan screenshot Anda sebelumnya)
+        SceneManager.LoadScene("startMenu");
+    }
 }

@@ -41,12 +41,12 @@ public class PlayerData : MonoBehaviour
 
     void WinGame()
     {
-        Debug.Log("PLAYER MENANG!");
-
-        // Nanti bisa ganti ke Scene Victory
-        // SceneManager.LoadScene("WinScene");
-
-        // atau munculkan panel kemenangan
-        // winPanel.SetActive(true);
+        Debug.Log(gameObject.name + " MENANG!");
+        
+        // Panggil fungsi TriggerWin dari GameManager
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.TriggerWin(this);
+        }
     }
 }
