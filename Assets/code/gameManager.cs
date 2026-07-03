@@ -7,6 +7,8 @@ using Unity.Cinemachine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance;
+
     // Fase giliran sekarang lebih ringkas (tanpa DiceFinished)
     private enum TurnPhase { WaitingForFocus, ReadyToRoll, Rolling, Moving }
     private TurnPhase currentPhase = TurnPhase.WaitingForFocus;
@@ -27,6 +29,9 @@ public class GameManager : MonoBehaviour
     public CinemachineCamera vcamPlayer;   
     public CinemachineCamera vcamDice; 
 
+    [Header("UI Percabangan (Canvas)")]
+    public GameObject panelCabang; // Panel yang berisi tombol-tombol pilihan cabang
+
     [Header("Referensi Objek")]
     public DiceRoller physicalDice; 
     [Tooltip("Masukkan semua petak (Node) berurutan dari awal sampai akhir")]
@@ -38,8 +43,16 @@ public class GameManager : MonoBehaviour
     private bool isOverviewActive = false;
     private int diceResult = 0;
 
+    void Awake()
+    {
+        Instance = this;
+    }
+
     void Start()
     {
+        // Pastikan UI cabang dimatikan di awal permainan
+        if (panelCabang != null) panelCabang.SetActive(false);
+
         // Pastikan setiap player memiliki komponen PlayerData
         foreach (var player in players)
         {
@@ -115,9 +128,37 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        // --- 4. LOGIKA CABANG JALAN ---
-        if (Keyboard.current.digit1Key.wasPressedThisFrame && ActivePlayer.isWaitingForBranch) ActivePlayer.SelectBranch(0);
-        if (Keyboard.current.digit2Key.wasPressedThisFrame && ActivePlayer.isWaitingForBranch) ActivePlayer.SelectBranch(1);
+        // --- 4. LOGIKA CABANG JALAN (Tombol Keyboard sebagai Backup) ---
+        if (Keyboard.current.digit1Key.wasPressedThisFrame && ActivePlayer.isWaitingForBranch) PilihCabang(0);
+        if (Keyboard.current.digit2Key.wasPressedThisFrame && ActivePlayer.isWaitingForBranch) PilihCabang(1);
+    }
+
+    // --- FUNGSI UNTUK DIPANGGIL OLEH TOMBOL UI CABANG ---
+    public void TampilkanUICabang()
+    {
+        if (panelCabang != null) panelCabang.SetActive(true);
+    }
+
+    public void SembunyikanUICabang()
+    {
+        if (panelCabang != null) panelCabang.SetActive(false);
+    }
+
+    public void PilihCabang(int branchIndex)
+    {
+        Debug.Log($"UI Tombol Cabang Ditekan! Minta index: {branchIndex}");
+        if (ActivePlayer != null)
+        {
+            Debug.Log($"ActivePlayer: {ActivePlayer.name}, isWaiting: {ActivePlayer.isWaitingForBranch}");
+            if (ActivePlayer.isWaitingForBranch)
+            {
+                ActivePlayer.SelectBranch(branchIndex);
+            }
+        }
+        else
+        {
+            Debug.LogWarning("ActivePlayer is NULL!");
+        }
     }
 
     IEnumerator RollDiceSequence()

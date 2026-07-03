@@ -13,7 +13,10 @@ public class PlayerNameplate : MonoBehaviour
     public float kecepatanFloat = 2f;
     public float amplitudoFloat = 0.15f;
 
-    private Vector3 posisiAwalLocal;
+    [Header("Pengaturan Posisi (World Space)")]
+    [Tooltip("Tinggi nama dari titik tengah karakter")]
+    public float tinggiNama = 3f;
+
     private Camera kameraUtama;
 
     void Start()
@@ -29,24 +32,30 @@ public class PlayerNameplate : MonoBehaviour
         {
             nameText.text = playerName;
         }
-
-        posisiAwalLocal = transform.localPosition;
     }
 
     void LateUpdate()
     {
-        // 1. Efek Billboard (Selalu menghadap kamera dari sudut manapun)
+        // 1. Posisi Mutlak (Abaikan rotasi tubuh karakter, pastikan selalu tepat di atas)
+        if (transform.parent != null)
+        {
+            Vector3 posisiTarget = transform.parent.position + new Vector3(0, tinggiNama, 0);
+            
+            // 2. Efek Mengambang (Floating)
+            if (gunakanFloating)
+            {
+                float ayunanY = Mathf.Sin(Time.time * kecepatanFloat) * amplitudoFloat;
+                posisiTarget.y += ayunanY;
+            }
+            
+            transform.position = posisiTarget;
+        }
+
+        // 3. Efek Billboard (Selalu menghadap kamera dari sudut manapun)
         if (kameraUtama != null)
         {
             // Memaksa objek ini menghadap searah dengan arah pandang kamera
             transform.forward = kameraUtama.transform.forward;
-        }
-
-        // 2. Efek Mengambang (Floating) di udara
-        if (gunakanFloating)
-        {
-            float ayunanY = Mathf.Sin(Time.time * kecepatanFloat) * amplitudoFloat;
-            transform.localPosition = posisiAwalLocal + new Vector3(0, ayunanY, 0);
         }
     }
 }

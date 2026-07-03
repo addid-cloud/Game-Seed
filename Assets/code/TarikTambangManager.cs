@@ -1,11 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro; // Ditambahkan untuk TextMeshPro
 
 public class TarikTambangManager : MonoBehaviour
 {
     [Header("Komponen UI")]
     public Slider barAdu;
+    public TMP_Text teksPengumuman; // Menampilkan tulisan "PEMAIN 1 MENANG!"
+    public GameObject panelGameOver; // Latar belakang semi-transparan saat game over
 
     [Header("Objek Utama")]
     public Transform tali;
@@ -47,6 +50,10 @@ public class TarikTambangManager : MonoBehaviour
             barAdu.maxValue = 1f;
             barAdu.value = 0f;
         }
+
+        // Sembunyikan UI Game Over di awal permainan
+        if (teksPengumuman != null) teksPengumuman.gameObject.SetActive(false);
+        if (panelGameOver != null) panelGameOver.SetActive(false);
 
         // Set awal ke state Mulai
         PlayAnimation(animKiri, "Mulai");
@@ -128,12 +135,12 @@ public class TarikTambangManager : MonoBehaviour
         // --- KONDISI GAME OVER (MENANG / KALAH) ---
         if (skorTarikan <= -batasMenang) // Kiri berhasil menarik sampai batas minimal
         {
-            EndGame("PEMAIN KIRI MENANG!", animKanan, animKiri);
+            EndGame("PLAYER KIRI WIN!", animKanan, animKiri);
             return;
         }
         if (skorTarikan >= batasMenang) // Kanan berhasil menarik sampai batas maksimal
         {
-            EndGame("PEMAIN KANAN MENANG!", animKiri, animKanan);
+            EndGame("PLAYER KANAN WIN!", animKiri, animKanan);
             return;
         }
 
@@ -154,6 +161,17 @@ public class TarikTambangManager : MonoBehaviour
     {
         gameSelesai = true;
         Debug.Log("GAME OVER: " + pesanMenang + " | Memaksa animasi Jatuh & Menang...");
+
+        // Menampilkan UI Kemenangan di Layar
+        if (teksPengumuman != null) 
+        {
+            teksPengumuman.text = pesanMenang;
+            teksPengumuman.gameObject.SetActive(true);
+        }
+        if (panelGameOver != null) 
+        {
+            panelGameOver.SetActive(true);
+        }
 
         // PAKSAAN MUTLAK: Hapus transisi yang sedang berjalan dan paksa state ke frame 0
         if (animKalah != null) 

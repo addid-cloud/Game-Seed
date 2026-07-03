@@ -36,9 +36,12 @@ public class PlayerMovement : MonoBehaviour
             // 2. Cek apakah ini jalan bercabang
             if (currentNode.nextNodes.Count > 1)
             {
-                Debug.Log("Jalur bercabang! Tekan '1' untuk jalur pertama, '2' untuk jalur kedua.");
+                Debug.Log("Jalur bercabang! Menunggu input pemain...");
                 isWaitingForBranch = true;
                 chosenNextNode = null;
+
+                // Tampilkan UI Pemilihan Cabang di Layar
+                if (GameManager.Instance != null) GameManager.Instance.TampilkanUICabang();
 
                 // Game akan "pause" di sini sampai pemain menekan tombol pilihan
                 while (isWaitingForBranch)
@@ -46,6 +49,9 @@ public class PlayerMovement : MonoBehaviour
                     yield return null; 
                 }
                 
+                // Sembunyikan UI setelah pemain memilih
+                if (GameManager.Instance != null) GameManager.Instance.SembunyikanUICabang();
+
                 currentNode = chosenNextNode;
             }
             else
@@ -190,10 +196,16 @@ public class PlayerMovement : MonoBehaviour
     // Fungsi untuk memilih jalur saat di persimpangan
     public void SelectBranch(int branchIndex)
     {
+        Debug.Log($"SelectBranch dipanggil dengan index: {branchIndex}. Total cabang tersedia: {currentNode.nextNodes.Count}");
         if (isWaitingForBranch && branchIndex < currentNode.nextNodes.Count)
         {
             chosenNextNode = currentNode.nextNodes[branchIndex];
             isWaitingForBranch = false; // Lanjutkan pergerakan
+            Debug.Log($"Cabang {branchIndex} berhasil dipilih!");
+        }
+        else
+        {
+            Debug.LogWarning($"Gagal memilih cabang! isWaiting: {isWaitingForBranch}, Index valid?: {branchIndex < currentNode.nextNodes.Count}");
         }
     }
 
