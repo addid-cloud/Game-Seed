@@ -23,6 +23,11 @@ private bool waitingForChoice = false;
     [Header("UI Kemenangan")]
     public GameObject winPanel;
     public TMPro.TMP_Text winText;
+    [Header("Demo Mode (Auto Play)")]
+    public bool isAutoPlayDemo = false;
+    private float autoPlayTimer = 0f;
+    public float autoPlayDelay = 1.5f;
+
     [Header("Pengaturan Waktu")]
     [SerializeField] private float waitBeforeMoving = 1.5f;
 
@@ -94,6 +99,42 @@ private bool waitingForChoice = false;
 
     void Update()
     {
+        // --- FITUR AUTO-PLAY DEMO ---
+        if (isAutoPlayDemo)
+        {
+            autoPlayTimer += Time.deltaTime;
+            if (autoPlayTimer >= autoPlayDelay)
+            {
+                autoPlayTimer = 0f; // Reset timer
+
+                if (waitingForChoice)
+                {
+                    // Otomatis beli tape jika cukup daun, kalau tidak tolak
+                    if (currentBuyer != null && currentBuyer.daun >= tapePrice) BuyTapeYes();
+                    else BuyTapeNo();
+                }
+                else if (ActivePlayer != null && ActivePlayer.isWaitingForBranch)
+                {
+                    // Otomatis pilih cabang pertama
+                    PilihCabang(0);
+                }
+                else if (!isOverviewActive)
+                {
+                    // Otomatis menggantikan tombol SPASI
+                    if (currentPhase == TurnPhase.WaitingForFocus)
+                    {
+                        currentPhase = TurnPhase.ReadyToRoll;
+                        Debug.Log("[Auto-Play] Fokus ke dadu.");
+                    }
+                    else if (currentPhase == TurnPhase.ReadyToRoll)
+                    {
+                        Debug.Log("[Auto-Play] Melempar dadu!");
+                        StartCoroutine(RollDiceSequence());
+                    }
+                }
+            }
+        }
+
         // --- 1. FITUR OVERVIEW MAP (Tombol 'O') ---
         if (Keyboard.current.oKey.wasPressedThisFrame)
         {
